@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>新闻资讯</title>
+	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.banner_swiper img{
+			width: 100%;
+		}
+		.banner_swiper .banner_icon2{
+			width: 346px;
+		}
+		.banner_swiper .banner_icon3{
+			/*top: 265px;*/
+			width: 150px;
+		}
+
+		.newsDetails{
+			min-width: 1200px;
+			background: #F7FBF9;
+		}
+		.newsDetails img{
+			width: 100%;
+		}
+		.newsMain{
+			margin: 0 auto 69px;
+			width: 65%;
+		}
+		.newsMain h2{
+			position: relative;
+			z-index: 1;
+			margin: -42px 0 42px;
+			font-size: 20px;
+			text-align: center;
+			color: #222222;
+			letter-spacing: 4px;
+		}
+		.tips{
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 42px;
+			font-size: 13px;
+			color: #666666;
+		}
+		.newsMain p{
+			text-indent: 2em;
+			font-size: 15px;
+			color: #666666;
+			letter-spacing: 1px;
+			line-height: 25px;
+			text-align: justify;
+		}
+		.newsMain img{
+			margin: 28px 0;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="center">
+			<div class="header">
+		<!-- <div class="center"> -->
+				<div class="container">
+					<nav class="navbar navbar-default">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="isShow()">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<h1>
+								<a href="index.html">
+									<img src="img/logo.png">
+								</a>
+							</h1>
+						</div>
+						<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
+							<!-- <span class="toggle">英文</span> -->
+							<ul class="nav navbar-nav navbar-right clear">
+								<li class="navcon downtitle">
+									<!-- <img src="img/index-icon1.png" class="boforeIcon"> -->
+									<a href="index.html" data-lang="index_header">首页</a>
+									<i class="navIcon"></i>
+								</li>
+								<li class="navcon downtitle">
+									<!-- <img src="img/about-icon.png" class="boforeIcon"> -->
+									<a href="about.html" data-lang="about_header">关于我们</a>
+									<i class="navIcon"></i>
+									<div class="downmenu">
+										<ul class="downMiddle">
+											<li>
+												<!-- <img src="img/info-icon1.png" class="downIcon"> -->
+												<a href="about.html" style="text-decoration: none;" data-lang="about_info">公司介绍</a>
+											</li>
+											<li>
+												<!-- <img src="img/zuzhi-icon1.png" class="downIcon"> -->
+												<a href="about.html?data=1" style="text-decoration: none;" data-lang="about_custructor">组织结构</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/wenhua-icon1.png" class="downIcon"> -->
+												<a href="about.html?data=2" style="text-decoration: none;" data-lang="about_culture">企业文化</a>
+											<!-- <li/> -->
+										</ul>
+									</div>
+								</li>
+								<li class="navcon downtitle">
+									<!-- <img src="img/do-icon.png" class="boforeIcon"> -->
+									<a href="do.html" data-lang="do_header">
+									公司业务
+									</a>
+									<i class="navIcon"></i>
+									<div class="downmenu clear" style="width: 120%;margin-left: -10%;">
+										<ul class="downMiddle">
+											<li>
+												<a href="do.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
+											</li>
+											<li>
+												<a href="http://greenbr.org.cn/" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
+											</li>
+											<li>
+												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
+											</li>
+											<li>
+												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
+											</li>
+											<li>
+												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
+											</li>
+											<li style="border-bottom: none;">
+												<a href="do-threeservice.html" style="text-decoration: none;" data-lang="do_three">咨询规划服务</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="navcon downtitle">
+									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
+									<a href="partners.html" data-lang="partner_header">合作伙伴</a>
+									<i class="navIcon"></i>
+								</li>
+								<li class="navcon downtitle">
+									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
+									<a href="program.html" data-lang="partner_header">项目案例</a>
+									<i class="navIcon"></i>
+									<div class="downmenu clear">
+										<ul class="downMiddle">
+											<li>
+												<!-- <img src="img/bigdata-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_map">能源节能</a>
+											</li>
+											<li>
+												<!-- <img src="img/sjserve-icon1.png" class="downIcon"> -->
+												<a href="program.html" data-lang="do_bigdata">智能办公</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">系统集成</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="navcon downtitle curson">
+									<!-- <img src="img/news-icon.png" class="boforeIcon"> -->
+									<a href="news.html" class="newsHeader" data-lang="news_header">
+										新闻资讯
+										<!-- <span class="caret"></span> -->
+									</a>
+									<i class="navIcon"></i>
+									<div class="downmenu clear">
+										<ul class="downMiddle newsHeaderList">
+											<li>
+												<!-- <img src="img/zixun-icon1.png" class="downIcon"> -->
+												<a href="news.html" style="text-decoration: none;" data-lang="news_media">媒体报道</a>
+											</li>
+											<li>
+												<!-- <img src="img/ydyl-icon1.png" class="downIcon"> -->
+												<a href="news.html?data=1" style="text-decoration: none;" data-lang="news_qiye">企业资讯</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/hangye-icon1.png" class="downIcon"> -->
+												<a href="news.html?data=2" style="text-decoration: none;" data-lang="news_ydyl">一带一路</a>
+											</li>
+										</ul>
+									</div>
+								</li> 
+								
+								<li class="navcon downtitle">
+									<!-- <img src="img/concat-icon.png" class="boforeIcon"> -->
+									<a href="concat.html" data-lang="concat_header" style="margin-right: 0;">联系我们</a>
+									<i class="navIcon"></i>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="banner_swiper">
+				<div class="swiper-container">
+					<img src="img/index/banner.png">
+				</div>
+				<img src="img/news/banner_icon1.png" class="banner_icon1">
+				<img src="img/news/banner_icon2.png" class="banner_icon2">
+				<img src="img/news/banner_icon3.png" class="banner_icon3">
+				<div class="language">
+					<span style="color: #00B85C;">[</span>
+					<span class="ch now_lan">中文</span>
+					<span>|</span>
+					<span class="en">English</span>
+					<span style="color: #00B85C;">]</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="newsDetails">
+		<div class="center">
+			<div class="newsMain">
+				<h2>生态环境部对外合作与交流中心领导就绿色供应链进行主题演讲</h2>
+				<div class="tips">
+					<p class="time">2019-08-9</p>
+					<span>来源：盈实科技（北京）有限公司</span>
+				</div>
+				<div class="essay">
+					<p> 2019年7月27日上午，由北京盈实智慧供应链管理有限公司承办的“2019产业供应链论坛”在广州广交会威斯汀酒店盛大开幕，本次论坛以“产业+供应链+金融”为主题进行了别开生面的探讨与交流。工信部、生态环境部、中国物流与采购联合会相关领导出席了论坛并进行了主题演讲</p>
+					<img src="img/news/newsdetails.png" alt="">
+					<p> 论坛上，生态环境部对外合作与交流中心技术交流部环保产业合作室主任刘婷女士就绿色供应链管理政策与实践进行了发言，她讲道，“绿色供应链是实现绿色生产方式的重要途经。”早在2016年，广东东莞就成为全国第一个绿色供应链试点城市，通过加强绿色采购、完善环境信息的披露制度和监管、促进绿色消费，来推动制造业的产业升级和绿色转型。 刘婷表示，绿色供应链是从全产业链进行绿色改造，降低污染排放和环境影响，“依旧可以降低成本，实现经济效益最大化，并且在销售模式中也引导消费者进行绿色采购和消费，推动培育绿色市场。”</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<div class="center">
+			<div class="bottom_con flex">
+				<div class="bottom_left">
+					<table>
+						<tr>
+							<th class="bottom_title">
+								<a href="about.html">关于我们</a>
+							</th>
+							<th class="bottom_title">
+								<a href="do.html">公司业务</a>
+							</th>
+							<th class="bottom_title">
+								<a href="program.html">项目案例</a>
+							</th>
+							<th class="bottom_title">
+								<a href="news.html" class="active">新闻资讯</a>
+							</th>
+							<th class="bottom_title">
+								<a href="index.html">网站首页</a>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="about.html" class=" aboutNav">公司介绍</a>
+							</td>
+							<td>
+								<a href="">大健康</a>
+							</td>
+							<td>
+								<a href="program.html">能源节约</a>
+							</td>
+							<td>
+								<a href="news.html" class="newsNav">媒体报道</a>
+							</td>
+							<th style="padding-bottom: 6px;">
+								<a href="partners.html">合作伙伴</a>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="about.html?data=1" class="aboutNav">组织结构</a>
+							</td>
+							<td>
+								<a href="">供应链</a>
+							</td>
+							<td>
+								<a href="program.html">智能办公</a>
+							</td>
+							<td>
+								<a href="news.html?data=1" class="newsNav">企业资讯</a>
+							</td>
+							<th>
+								<a href="concat.html">联系我们</a>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="about.html?data=2" class="aboutNav">企业文化</a>
+							</td>
+							<td>
+								<a href="">大数据服务</a>
+							</td>
+							<td>
+								<a href="program.html">系统集成</a>
+							</td>
+							<td>
+								<a href="news.html?data=2" class="newsNav">一带一路</a>
+							</td>
+							<th>    </th>
+						</tr>
+						<tr>
+							<td>    </td>
+							<td>
+								<a href="">信息化服务</a>
+							</td>
+							<td>    </td>
+							<td>
+								
+							</td>
+							<th>    </th>
+						</tr>
+						<tr>
+							<td>     </td>
+							<td>
+								<a href="">智能化服务</a>
+							</td>
+							<td>    </td>
+							<td>    </td>
+							<th>    </th>
+						</tr>
+						<tr>
+							<td>     </td>
+							<td>
+								<a href="">咨询规划服务</a>
+							</td>
+							<td>    </td>
+							<td>    </td>
+							<th>    </th>
+						</tr>
+					</table>
+					<ul class="concat flex">
+						<li>
+							<img src="img/tel_icon.png">
+							<span>010-66608888</span>
+						</li>
+						<li>
+							<img src="img/address_icon.png" alt="">
+							<span>北京市朝阳区化工路焦奥中心4号楼14层</span>
+						</li>
+						<li>
+							<img src="img/email_icon.png">
+							<span>contact@yingshibj.com</span>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom_right">
+					<img src="img/erweima.png" alt="">
+					<span>盈实科技公众号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copy">
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+	</div>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/public.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+.banner_swiper img{
+	width: 100%;
+}
+.banner_swiper .banner_icon2{
+	width: 346px;
+}
+.banner_swiper .banner_icon3{
+	width: 239px;
+}
+/*选项卡*/
+.tabbox{
+	margin:10px auto;
+	min-width: 1200px;
+	background: #F7FBF9;
+}
+.tabbox ul{
+	position: relative;
+	z-index: 1;
+	margin: -44px auto 0;
+	list-style:none;
+	width: 60%;
+}
+.tabbox ul li{
+	width:100px;
+	width: 130px;
+	height: 40px;
+	line-height: 38px;
+	text-align: center;
+	cursor:pointer;
+	border-radius: 3px;
+	letter-spacing: 1px;
+	font-size: 17px;
+	color: #003E3A;
+}
+.tabbox ul li.active{
+	background-color:#017F40;
+	color:white;
+	/*font-weight:bold;*/
+}
+.tabbox .content{
+	margin: 0 auto;
+	/*width: 60%;*/
+	position: relative;
+}
+.company_info{
+	margin: 0 auto;
+	width: 60%;
+}
+.tabbox .content>div{
+	display:none;
+}
+.tabbox .content>div.active{
+	display:block;
+}
+.line{
+	margin: 38px auto 47px;
+	width: 60%;
+	height: 1px;
+	background: #D8D8D8;
+}
+
+.kj_info h3{
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #003E3A;
+}
+.kj_info p{
+	text-indent: 2em;
+	font-size: 14px;
+	color: #658684;
+	text-align: justify;
+}
+.other{
+	margin: -27px auto 20px;
+	width: 60%;
+	text-indent: 2em;
+    font-size: 14px;
+    color: #658684;
+    text-align: justify;
+}
+.swiper-container{
+	top: 0;
+}
+.content .swiper-button-next img,.content .swiper-button-prev img{
+	width: 20px;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+	right: 130px;
+	left: auto;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+	left: 130px;
+	right: auto;
+}
+.swiper-button-next, .swiper-button-prev{
+	top: 30%;
+	transform: translateY(-50%);
+}
+.swiper-slide img{
+	margin-right: 23px;
+}
+.tabbox .content .photos{
+	position: relative;
+	display: block;
+	margin: 100px 0 150px;
+	/*margin-left: -40%;*/
+	/*width: 160%;*/
+	height: 110px;
+	background: #017F40;
+}
+.tabbox .content .photos img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+}
+.custructor{
+	display: block;
+	margin: -30px auto 10px;
+	width: 60%;
+}
+
+.wen_con{
+	margin: -30px 0 0;
+}
+.wenhua{
+	margin: 0 auto;
+	width: 60%;
+	align-items: center;
+	background: #F1F1F1;
+	overflow: hidden;
+}
+.culture{
+	padding: 60px;
+	color: #658684;
+	width: 50%;
+	/*height: 100%;*/
+}
+.culture h3{
+	margin: 10px 0;
+	font-size: 16px;
+	/*font-weight: bold;*/
+	line-height: 26px;
+	color: #003E3A;
+}
+.culture p{
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.wenhua img{
+	width: 50%;
+}

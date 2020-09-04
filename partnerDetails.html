@@ -3,13 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>大健康</title>
+	<title>合作伙伴</title>
 	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<style>
+		.swiper-container{
+			top: -18px;
+		}
+
 		.banner_swiper img{
 			width: 100%;
 		}
@@ -18,7 +22,30 @@
 		}
 		.banner_swiper .banner_icon3{
 			/*top: 265px;*/
-			width: 150px;
+			width: 75px;
+		}
+
+		.partnersDetails{
+			min-width: 1200px;
+			background: #F7FBF9;
+		}
+		.partnersMain{
+			margin: 0 auto 69px;
+			width: 65%;
+			font-size: 14px;
+			color: #658684;
+		}
+		.partnersMain h2{
+			margin-bottom: 30px;
+			text-align: center;
+			font-size: 20px;
+			letter-spacing: 1px;
+			color: #003E3A;
+		}
+		.partnersMain img{
+			margin-right: 25px;
+			margin-bottom: 6px;
+			width: 360px;
 		}
 	</style>
 </head>
@@ -100,7 +127,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="navcon downtitle">
+								<li class="navcon downtitle curson">
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="partners.html" data-lang="partner_header">合作伙伴</a>
 									<i class="navIcon"></i>
@@ -126,7 +153,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="navcon downtitle curson">
+								<li class="navcon downtitle">
 									<!-- <img src="img/news-icon.png" class="boforeIcon"> -->
 									<a href="news.html" class="newsHeader" data-lang="news_header">
 										新闻资讯
@@ -163,17 +190,26 @@
 			</div>
 			<div class="banner_swiper">
 				<div class="swiper-container">
-					<img src="img/index/banner.png">
+					<img src="img/partners/banner1.png">
 				</div>
-				<img src="img/do/banner_icon1.png" class="banner_icon1">
-				<img src="img/do/banner_icon2.png" class="banner_icon2">
-				<img src="img/do/banner_icon3.png" class="banner_icon3">
 				<div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
 					<span>|</span>
 					<span class="en">English</span>
 					<span style="color: #00B85C;">]</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="partnersDetails">
+		<div class="center">
+			<div class="partnersMain">
+				<h2>国际在线</h2>
+				<div class="essay">
+					<img src="img/partners/details1.png" alt="" align="left">
+					<p> 国际在线是于1998年12月26日正式发布，由中国国际广播电台（简称“CRI”）)主办的国家重点新闻网站。国际在线是全球语言种类最多、传播地域最广、影响人群最大的多语种、多应用、多终端网站集群，通过61种语言对全球进行传播，受众遍布全球五大洲180多个国家和地区。旨在介绍中国的政治、经济、体育和文化等各个方面，主要提供新闻、文化和经济类信息，并以丰富的音频节目为特色，现已发展成为囊括了环球网络电台、网络电视和播客平台等新媒体在内的多媒体集群网站。除浏览网站图文外，访问者可以登陆北京、华盛顿、伦敦、东京、柏林、开罗、莫斯科、悉尼等12个城市的环球网络电台欣赏“国际在线”专门为网友制作的精彩节目，或制作自己的个性播客，也可以登陆网络电视收看视频节目。 作为盈实科技战略合作媒体，国际在线以中国国际广播电台丰富的语种报道资源为依托，针对不同国家或民族媒体受众，为“一带一路”生态环保大数据服务平台参与企业提供定制化地报道宣传服务。此外，借助丰富的海外合作媒体资源，为大数据平台联合工作组提供专业化的语言服务。彩节目，或制作自己的个性播客，也可以登陆网络电视收看视频节目。 作为盈实科技战略合作媒体，国际在线以中国国际广播电台丰富的语种报道资源为依托，针对不同国家或民族媒体受众，为“一带一路”生态环保大数据服务平台参与企业提供定制化地报道宣传服务。此外，借助丰富的海外合作媒体资源，为大数据平台联合工作组提供专业化的语言服务。</p>
 				</div>
 			</div>
 		</div>
@@ -195,7 +231,7 @@
 								<a href="program.html">项目案例</a>
 							</th>
 							<th class="bottom_title">
-								<a href="news.html" class="active">新闻资讯</a>
+								<a href="news.html">新闻资讯</a>
 							</th>
 							<th class="bottom_title">
 								<a href="index.html">网站首页</a>
@@ -215,7 +251,7 @@
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
 							<th style="padding-bottom: 6px;">
-								<a href="partners.html">合作伙伴</a>
+								<a href="partners.html" class="active">合作伙伴</a>
 							</th>
 						</tr>
 						<tr>

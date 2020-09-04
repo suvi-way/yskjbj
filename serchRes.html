@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>新闻资讯</title>
+	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<style>
+		.language{
+			position: absolute;
+			top: 50%;
+			right: 50px;
+			transform: translate(-50%,-50%);
+			background: transparent;
+		}
+		.top{
+			position: relative;
+			padding: 10px 0;
+			min-width: 1200px;
+			background: #335E49;
+		}
+		h1{
+			margin: 0 50px 0 30px;
+			width: 140px;
+		}
+		h1 img{
+			width: 100%;
+		}
+		div.search{
+			width: 40%;
+			margin-top: 4px;
+		}
+		div.search input{
+			padding: 8px 0 8px 7px;
+			width: 80%;
+			border-radius: 4px;
+			border: none;
+		}
+		input::-webkit-input-placeholder{
+			font-size: 12px;
+		}
+		img.search{
+			margin-top: -2px;
+			width: 40px;
+			cursor: pointer;
+		}
+		.now_lan{
+			color: #A2FFD0;
+		}
+
+		.content{
+			min-width: 1200px;
+			background: #F7FBF9;
+		}
+		.wrap{
+			margin: 0 auto 46px;
+			width: 72%;
+		}
+		.title{
+			min-width: 1200px;
+			background: #F1F1F1;
+		}
+		.news{
+			margin: 0 auto;
+			width: 75%;
+			/*background: red;*/
+		}
+		.newsSelect{
+			margin: 0 auto;
+			padding-top: 8px;
+			width: 72%;
+			text-align: center;
+			font-size: 18px;
+			box-sizing: border-box;
+		}
+		.newsSelect li{
+			float: left;
+			margin: 0 2%;
+			padding: 10px 5px;
+			/*width: 18%;*/
+			cursor: pointer;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.cur{
+			color: #017F40;
+			border-bottom: 1px solid #017F40;
+		}
+		.searchCon{
+			/*display: none;*/
+		}
+		.searchCon ul{
+			margin: 35px auto 0;
+			padding: 0 10px;
+			/*width: 75%;*/
+		}
+		.searchCon ul{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.searchCon ul li{
+			margin-bottom: 50px;
+			padding: 9px;
+			width: 30%;
+			border: 1px solid #F7FBF9;
+			border-bottom: 1px solid #D8D8D8;
+			cursor: pointer;
+			border-radius: 3px;
+		}
+		.searchCon ul li:hover{
+			border: 1px solid #017F40;
+			background: rgba(1,127,64,0.05);
+		}
+		.searchCon ul li:hover .jianjie{
+			color: rgba(0,62,58,0.6);
+		}
+		.searchCon ul li img{
+			width: 100%;
+		}
+		.searchCon ul li h3{
+			font-size: 15px;
+			color: #003E3A;
+			line-height: 36px;
+		}
+		.jianjie{
+			font-size: 13px;
+			color: #666;
+			text-align: justify;
+			text-overflow: -o-ellipsis-lastline;
+		    overflow: hidden;
+		    line-height: 18px;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+		.more{
+			margin: 25px 0 25px;
+			font-size: 13px;
+			color: #666666;
+		}
+		.more a{
+			color: #666666;
+		}
+		.nosearch{
+			display: none;
+			margin: 0 auto;
+			width: 71%;
+			color: #666666;
+			font-size: 13px;
+			line-height: 70px;
+		}
+	</style>
+</head>
+<body>
+	<div class="top clear">
+		<div class="center">
+			<h1 class="fl">
+				<a href="index.html">
+					<img src="img/news/logo.png">
+				</a>
+			</h1>
+			<div class="search fl">
+				<input type="text" name="" placeholder="搜索新闻..." class="searchInput">
+				<img src="img/news/search.png" class="search searchImg">
+			</div>
+			<div class="language fr">
+				<!-- <span style="color: #00B85C;">[</span> -->
+				
+				<span class="en">English</span>
+				<span style="margin: 0 7px;">|</span>
+				<span class="ch now_lan">中文</span>
+				<!-- <span style="color: #00B85C;">]</span> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="center">
+			<div class="title">
+				<ul class="newsSelect clear">
+					<li class="cur" data-id="0" data-lang="news_total">全部</li>
+					<li data-id="3" data-lang="news_ydyl">媒体报道</li>
+					<li data-id="1" data-lang="news_media">企业资讯</li>
+					<li data-id="2" data-lang="news_qiye">一带一路新闻</li>
+					
+					<!-- <li data-id="4"></li> -->
+					<!-- <li class="cur">全部</li> -->
+				</ul>
+			</div>
+			<div class="wrap">
+				<div class="searchCon">
+					<ul>
+						<li onclick="goNewsDetails(this)">
+							<img src="img/news/news1.png">
+							<h3>多方针对绿色供应链的共建</h3>
+							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
+							<div class="more flex">
+								<a href="" target="_blank">MORE></a>
+								<span class="time">8/12</span>
+							</div>
+						</li>
+						<li onclick="goNewsDetails(this)">
+							<img src="img/news/news1.png">
+							<h3>多方针对绿色供应链的共建</h3>
+							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
+							<div class="more flex">
+								<a href="" target="_blank">MORE></a>
+								<span class="time">8/12</span>
+							</div>
+						</li>
+						<li onclick="goNewsDetails(this)">
+							<img src="img/news/news1.png">
+							<h3>多方针对绿色供应链的共建</h3>
+							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
+							<div class="more flex">
+								<a href="" target="_blank">MORE></a>
+								<span class="time">8/12</span>
+							</div>
+						</li>
+						<li>
+							<img src="img/news/news1.png">
+							<h3>多方针对绿色供应链的共建</h3>
+							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
+							<div class="more flex">
+								<a href="" target="_blank">MORE></a>
+								<span class="time">8/12</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="nosearch">
+					搜索暂无结果
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="bottom">
+		<div class="center">
+			<div class="bottom_con flex">
+				<div class="bottom_left">
+					<table>
+						<tr>
+							<th class="bottom_title">
+								<a href="about.html">关于我们</a>
+							</th>
+							<th class="bottom_title">
+								<a href="do.html">公司业务</a>
+							</th>
+							<th class="bottom_title">
+								<a href="program.html">项目案例</a>
+							</th>
+							<th class="bottom_title">
+								<a href="news.html" class="active">新闻资讯</a>
+							</th>
+							<th class="bottom_title">
+								<a href="index.html">网站首页</a>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="about.html" class=" aboutNav">公司介绍</a>
+							</td>
+							<td>
+								<a href="">大健康</a>
+							</td>
+							<td>
+								<a href="program.html">能源节约</a>
+							</td>
+							<td>
+								<a href="news.html" class="newsNav">媒体报道</a>
+							</td>
+							<th style="padding-bottom: 6px;">
+								<a href="partners.html">合作伙伴</a>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="about.html?data=1" class="aboutNav">组织结构</a>
+							</td>
+							<td>
+								<a href="">供应链</a>
+							</td>
+							<td>
+								<a href="program.html">智能办公</a>
+							</td>
+							<td>
+								<a href="news.html?data=1" class="newsNav">企业资讯</a>
+							</td>
+							<th>
+								<a href="concat.html">联系我们</a>
+							</th>
+						</tr>
+						<tr>
+							<td>
+								<a href="about.html?data=2" class="aboutNav">企业文化</a>
+							</td>
+							<td>
+								<a href="">大数据服务</a>
+							</td>
+							<td>
+								<a href="program.html">系统集成</a>
+							</td>
+							<td>
+								<a href="news.html?data=2" class="newsNav">一带一路</a>
+							</td>
+							<th>    </th>
+						</tr>
+						<tr>
+							<td>    </td>
+							<td>
+								<a href="">信息化服务</a>
+							</td>
+							<td>    </td>
+							<td>
+								
+							</td>
+							<th>    </th>
+						</tr>
+						<tr>
+							<td>     </td>
+							<td>
+								<a href="">智能化服务</a>
+							</td>
+							<td>    </td>
+							<td>    </td>
+							<th>    </th>
+						</tr>
+						<tr>
+							<td>     </td>
+							<td>
+								<a href="">咨询规划服务</a>
+							</td>
+							<td>    </td>
+							<td>    </td>
+							<th>    </th>
+						</tr>
+					</table>
+					<ul class="concat flex">
+						<li>
+							<img src="img/tel_icon.png">
+							<span>010-66608888</span>
+						</li>
+						<li>
+							<img src="img/address_icon.png" alt="">
+							<span>北京市朝阳区化工路焦奥中心4号楼14层</span>
+						</li>
+						<li>
+							<img src="img/email_icon.png">
+							<span>contact@yingshibj.com</span>
+						</li>
+					</ul>
+				</div>
+				<div class="bottom_right">
+					<img src="img/erweima.png" alt="">
+					<span>盈实科技公众号</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copy">
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+	</div>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/public.js"></script>
+
+	<script>
+		$(".newsSelect li").click(function(){
+			console.log($(this))
+			keyWords=$(".searchInput").val();
+    		var that=$(this);
+    		$(this).addClass("cur").siblings().removeClass("cur");
+    		$("tr td a").each(function(index,val){
+    			if(that.html()==val.innerHTML){
+    				$("tr td").eq(index).children("a").addClass('activeNav').parents().siblings().children("td").children("a").removeClass('activeNav');
+    				$("tr th").children("a").removeClass('activeNav');
+    			}else if(that.html()=="全部"){
+    				$(".newsTitle").addClass("activeNav");
+    				$("tr td").children('a').removeClass("activeNav");
+    			}
+    		})
+    		var id=$(this).attr("data-id");
+    	// 	$.ajax({
+    	// 		type:"POST",
+    	// 		url:"http://39.100.241.51:8080/news/getNewsBytitle?nkid="+id,
+    	// 		data:{title:keyWords},
+    	// 		success:function(n){
+    	// 			var newsList=n.extend.newsList;
+    	// 			if(newsList.length>0){
+					// 	console.log("ccc")
+					// 	$(".nosearch").hide();
+					// 	$(".searchCon").show();
+					// 	var html="";
+					// 	for(var i=0;i<newsList.length;i++){
+					// 		html+='<li class="clear newsMain" data-id="'+newsList[i].id+'"><div class="dataImg fl"><img src="http://39.100.241.51:8080'+newsList[i].newcover+'"></div><div class="dataDescription fl"><h3>'+newsList[i].title+'</h3><p>'+newsList[i].outline+'</p><span class="more" onclick="goNewsDetails(this)">了解更多</span></div></li>';
+					// 	}
+					// 	$(".searchCon ul").html(html);
+					// 	$(".dataDescription h3").mark(keyWords);
+					// }else{
+					// 	console.log("ddd")
+					// 	$(".searchCon").hide();
+					// 	$(".nosearch").css("display","block");
+					// }
+    	// 		}
+    	// 	})
+    		// var newsItem=$(this).html();
+    		// var newsItemIndex=$(this).index()
+    		// sessionStorage.setItem("newsItem",newsItem);
+    		// sessionStorage.setItem("newsItemIndex",newsItemIndex);
+    	})
+	</script>
+</body>
+</html>

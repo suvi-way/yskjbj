@@ -105,13 +105,15 @@
 			align-items: center;
 		    background: linear-gradient(180deg,rgba(1,127,81,1) 0%,rgba(94,209,152,1) 100%);
 		}
-		.work_con li:hover .curson{
-			/*display: block;*/
+		.work_con li:hover h4,.work_con li:hover p{
+			color: #fff;
+		}
+		/*.work_con li:hover .curson{
 			opacity: 1;
 		}
 		.work_con li:hover .origin{
 			display: none;
-		}
+		}*/
 	</style>
 </head>
 <body>
@@ -201,7 +203,7 @@
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
-									<div class="downmenu clear">
+									<div class="downmenu clear" style="width: 132%;margin-left: -16%;">
 										<ul class="downMiddle">
 											<li>
 												<!-- <img src="img/bigdata-icon1.png" class="downIcon"> -->
@@ -211,9 +213,17 @@
 												<!-- <img src="img/sjserve-icon1.png" class="downIcon"> -->
 												<a href="program.html" data-lang="do_bigdata">智能办公</a>
 											</li>
-											<li style="border-bottom: none;">
+											<li>
 												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
 												<a href="program.html" style="text-decoration: none;" data-lang="do_green">系统集成</a>
+											</li>
+											<li>
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">环保咨询</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">现代供应链咨询</a>
 											</li>
 										</ul>
 									</div>
@@ -278,16 +288,11 @@
 				<p class="line"></p>
 			</div>
 			<ul class="work_con flex">
-				<li class="first">
+<!-- 				<li class="first">
 					<div class="origin">
 						<img src="img/index/work_icon1.png">
 						<h4>大健康</h4>
 						<p>医疗康养综合解决方案<br>医疗信息化服务等</p>
-					</div>
-					<div class="curson">
-						<img src="img/index/work_image1.png" alt="">
-						<img src="img/index/work_image2.png">
-						<p>我司大健康项目与中国健康养老集团、中国通用技术集团合作</p>
 					</div>
 				</li>
 				<li class="first">
@@ -349,7 +354,7 @@
 						<img src="img/index/work_image10.png">
 						<p>我司咨询规划服务项目与中物联现代供应链研究院、中绿实业有限公司合作</p>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>
@@ -430,7 +435,9 @@
 							<td>
 								<a href="">信息化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">环保咨询</a>
+							</td>
 							<td>
 								
 							</td>
@@ -441,7 +448,9 @@
 							<td>
 								<a href="">智能化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">现代供应链咨询</a>
+							</td>
 							<td>    </td>
 							<th>    </th>
 						</tr>
@@ -484,5 +493,35 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/public.js"></script>
+	<script>
+		jQuery.support.cors = true;
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/home/business",
+			data:"",
+			dataType:'JSON',
+			success: function(n){
+				var html='';
+				var list=n.data;
+				for(var i=0;i<list.length;i++){
+					if(list[i].titles==null){
+						list[i].titles="";
+					}
+					html+='<li class="first"><div class="origin"><img src="http://39.100.241.51:81/'+list[i].picture+'"><h4>'+list[i].name+'</h4><p>'+list[i].title+'</p><p>'+list[i].titles+'</p></div></li>'
+				}
+				$(".work_con").prepend(html);
+
+				// 项目案例鼠标经过
+				$(".work_con li").each(function(i,v){
+					$(v).mouseover(function(){
+						$(this).find("img").attr("src","http://39.100.241.51:81/"+list[i].pictures)
+					})
+					$(v).mouseout(function(){
+						$(this).find("img").attr("src","http://39.100.241.51:81/"+list[i].picture)
+					})
+				})
+			}
+		})
+	</script>
 </body>
 </html>

@@ -346,7 +346,7 @@
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
-									<div class="downmenu clear">
+									<div class="downmenu clear" style="width: 132%;margin-left: -16%;">
 										<ul class="downMiddle">
 											<li>
 												<!-- <img src="img/bigdata-icon1.png" class="downIcon"> -->
@@ -356,9 +356,17 @@
 												<!-- <img src="img/sjserve-icon1.png" class="downIcon"> -->
 												<a href="program.html" data-lang="do_bigdata">智能办公</a>
 											</li>
-											<li style="border-bottom: none;">
+											<li>
 												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
 												<a href="program.html" style="text-decoration: none;" data-lang="do_green">系统集成</a>
+											</li>
+											<li>
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">环保咨询</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">现代供应链咨询</a>
 											</li>
 										</ul>
 									</div>
@@ -454,36 +462,13 @@
 				<span data-lang="zhaopin">职位招聘</span>
 			</h3>
 			<ul class="clear">
-				<li>
+<!-- 				<li>
 					<img src="img/concat/renshi.png">
 					<p>网站开发工程师</p>
 					<div class="details">
 						1.对页面性能和浏览器兼容性有丰富的实践经验，熟悉DOM跨域数据处理；<br> 2.掌握Spring、Spring MVC、Mybatis及其他常用开发框架，有良好的数据结构和算法基础； <br>3.了解web及前端技术，能够和前端工作人员进行有效的沟通； 4.三年以上开发经验； <br>5.工作态度积极主动，良好的沟通能力。 7.开发语言为java
 					</div>
-				</li>
-				<li>
-					<img src="img/concat/renshi.png">
-					<p>网页设计师</p>
-				</li>
-				<li>
-					<img src="img/concat/renshi.png">
-					<p>网站设计/网站开发</p>
-				</li>
-				<li>
-					<img src="img/concat/renshi.png">
-					<p>文案策划</p>
-				</li>
-				<li>
-					<img src="img/concat/renshi.png">
-					<p>董事长助理</p>
-				</li>
-				<li>
-					<img src="img/concat/renshi.png">
-					<p>网站开发工程师</p>
-					<div class="details">
-						1.对页面性能和浏览器兼容性有丰富的实践经验，熟悉DOM跨域数据处理；<br> 2.掌握Spring、Spring MVC、Mybatis及其他常用开发框架，有良好的数据结构和算法基础； <br>3.了解web及前端技术，能够和前端工作人员进行有效的沟通； 4.三年以上开发经验； <br>5.工作态度积极主动，良好的沟通能力。 7.开发语言为java
-					</div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>
@@ -500,7 +485,7 @@
 				</div>
 				<span class="tip" style="background: #fff;">*请输入正确的手机号格式</span>
 				<div class="input">
-					<!-- <label class="liuyan">留言内容</label> -->
+					<!-- <!-- <label class="liuyan">留言内容</label> -->
 					<textarea rows="4" style="resize: none;" maxlength="200" placeholder="最多200字/we will contact you ASAP" class="info"></textarea>
 				</div>
 				<span class="submit">
@@ -655,13 +640,8 @@
 	<script src="js/public.js"></script>
 
 	<script>
-		// 职位招聘每一个li的背景颜色
-		$(".recruit ul>li").each(function(index,e){
-			console.log(index)
-			if(index%2==0){
-				$(e).css("background","#F1F1F1");
-			}
-		})
+		jQuery.support.cors = true;
+
 		$(".submitBtn").click(function(){
 			jsp();
 		})
@@ -675,6 +655,7 @@
 			$("body").css({"height":"auto","overflow":"auto"});
 		})
 		var timer=null;
+
 		//手机号输入框添加键盘事件判断手机号格式是否正确
 		function checkTel(){
 			var tel=$(".tel").val();
@@ -702,7 +683,7 @@
 			if(sendname && checkTel() && message){
 				$.ajax({
 					type:"POST",
-					url:"http://39.100.241.51:8080/contact/contactUs",
+					url:"http://39.100.241.51:81/api/contat/save",
 					data:{sendname:sendname,telphone:telphone,message:message},
 					dataType:"JSON",
 					success:function(n){
@@ -736,6 +717,30 @@
 				$(".message").css("left","25%");
 			}
 		}
+
+		//招聘信息数据
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/icons/selectList",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var html="";
+				var work=n.data;
+				for(var i=0;i<work.length;i++){
+					html+='<li><img src="http://39.100.241.51:81/'+work[i].icon+'"><p>'+work[i].icname+'</p><div class="details">'+work[i].skill+'</div></li>'
+				}
+				$(".recruit ul").prepend(html);
+
+				// 职位招聘每一个li的背景颜色
+				$(".recruit ul>li").each(function(index,e){
+					// console.log(index)
+					if(index%2==0){
+						$(e).css("background","#F1F1F1");
+					}
+				})
+			}
+		})
 	</script>
 </body>
 </html>

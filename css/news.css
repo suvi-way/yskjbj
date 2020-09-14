@@ -103,13 +103,20 @@ input::-webkit-input-placeholder{
 	flex-wrap: wrap;
 }
 .con ul li{
-	margin-bottom: 50px;
+	float: left;
+	margin: 0 2.5% 50px 2.5%;
 	padding: 9px;
 	width: 30%;
 	border: 1px solid #F7FBF9;
 	border-bottom: 1px solid #D8D8D8;
 	cursor: pointer;
 	border-radius: 3px;
+}
+.con ul li:nth-child(3n){
+	margin: 0 0 50px 2.5%;
+}
+.con ul li:nth-child(3n+1){
+	margin: 0 2.5% 50px 0;
 }
 .con ul li:hover{
 	border: 1px solid #017F40;
@@ -125,6 +132,12 @@ input::-webkit-input-placeholder{
 	font-size: 15px;
 	color: #003E3A;
 	line-height: 36px;
+	text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
 }
 .jianjie{
 	font-size: 13px;
@@ -146,6 +159,16 @@ input::-webkit-input-placeholder{
 .more a{
 	color: #666666;
 }
+/*最后一行左对齐*/
+/*.newsContent ul::after{ 
+    flex: auto;
+    content: "";
+}*/
+/*.newsContent ul li:last-child:nth-child(3n + 2){
+	color: red;
+  margin-right: calc((100% -$width)/2);
+}*/
+
 /*分页样式*/
 .box{
 	margin: 0 auto 80px;

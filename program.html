@@ -159,7 +159,7 @@
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
-									<div class="downmenu clear">
+									<div class="downmenu clear" style="width: 132%;margin-left: -16%;">
 										<ul class="downMiddle">
 											<li>
 												<!-- <img src="img/bigdata-icon1.png" class="downIcon"> -->
@@ -169,9 +169,17 @@
 												<!-- <img src="img/sjserve-icon1.png" class="downIcon"> -->
 												<a href="program.html" data-lang="do_bigdata">智能办公</a>
 											</li>
-											<li style="border-bottom: none;">
+											<li>
 												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
 												<a href="program.html" style="text-decoration: none;" data-lang="do_green">系统集成</a>
+											</li>
+											<li>
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">环保咨询</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">现代供应链咨询</a>
 											</li>
 										</ul>
 									</div>
@@ -236,7 +244,7 @@
 				<p class="line"></p>
 			</div>
 			<ul>
-				<li class="flex">
+				<!-- <li class="flex">
 					<img src="img/program/program1.png">
 					<div class="program_con" style="margin: 0 32px 0 18px;">
 						<h3 style="text-align: right;">能源节能</h3>
@@ -259,7 +267,7 @@
 						<p>仙桃国际大数据谷位于重庆市渝北区，做为西部重要的科技技术产业中心园区， 围绕中国大数据产业生态谷的总体目标，坚持技术创新、模式创新、业态创新、协同创新，集中优势资源着力发展大数据产业，形成自主可控的大数据产业链、价值链和生态系统。园区整体规划面积2平方公里，总建设规模约175万平方米，预计静态建设投资约127亿元。</p>
 					</div>
 					<div class="border"></div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>
@@ -340,7 +348,9 @@
 							<td>
 								<a href="">信息化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">环保咨询</a>
+							</td>
 							<td>
 								
 							</td>
@@ -351,7 +361,9 @@
 							<td>
 								<a href="">智能化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">现代供应链咨询</a>
+							</td>
 							<td>    </td>
 							<th>    </th>
 						</tr>
@@ -393,5 +405,30 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/public.js"></script>
+	<script>
+		jQuery.support.cors = true;
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/cases/list",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var html='';
+				var list=n.data;
+				// var k=1;
+				for(var i=0;i<list.length;i++){
+					// console.log(i,2*k)
+					if(i%2==0){
+						// console.log(i)
+						html+='<li class="flex"><img src="http://39.100.241.51:81/'+list[i].casepicture+'"><div class="program_con" style="margin: 0 32px 0 18px;"><h3 style="text-align: right;">'+list[i].name+'</h3><p>'+list[i].title+'</p></div><div class="border"></div></li>'
+					}else{
+						// console.log(i)
+						html+='<li class="flex" style="background: rgba(1,127,64,0.06);"><div class="border"></div><div class="program_con" style="margin-left: 32px;"><h3>'+list[i].name+'</h3><p>'+list[i].title+'</p></div><img src="http://39.100.241.51:81/'+list[i].casepicture+'" style="margin-left: 18px;"></li>'
+					}
+				}
+				$(".program ul").prepend(html);
+			}
+		})
+	</script>
 </body>
 </html>

@@ -98,7 +98,7 @@
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
-									<div class="downmenu clear">
+									<div class="downmenu clear" style="width: 132%;margin-left: -16%;">
 										<ul class="downMiddle">
 											<li>
 												<!-- <img src="img/bigdata-icon1.png" class="downIcon"> -->
@@ -108,9 +108,17 @@
 												<!-- <img src="img/sjserve-icon1.png" class="downIcon"> -->
 												<a href="program.html" data-lang="do_bigdata">智能办公</a>
 											</li>
-											<li style="border-bottom: none;">
+											<li>
 												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
 												<a href="program.html" style="text-decoration: none;" data-lang="do_green">系统集成</a>
+											</li>
+											<li>
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">环保咨询</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">现代供应链咨询</a>
 											</li>
 										</ul>
 									</div>
@@ -177,7 +185,7 @@
 		　　</ul>
 			<p class="line"></p>
 			<div class="content">
-			　　<div class="aboutContent active">
+			　　<div class="aboutContent" style="display: block;">
 					<div class="other">
 						盈实科技（北京）有限公司下设两家子公司。北京盈实智慧供应链有限公司负责现代供应链咨询规划、信息化平台搭建、硬件设备、供应链金融平台及供应链平台的运营管理服务。盈实未来信息科技（北京）有限公司提供智能化服务，致力于数字园区、数字城市、数字中国的建设服务，为用户提供大数据可视化等综合解决方案。
 					</div>
@@ -271,7 +279,7 @@
 								<a href="about.html" class="active">关于我们</a>
 							</th>
 							<th class="bottom_title">
-								<a href="">公司业务</a>
+								<a href="do.html">公司业务</a>
 							</th>
 							<th class="bottom_title">
 								<a href="program.html">项目案例</a>
@@ -337,7 +345,9 @@
 							<td>
 								<a href="">信息化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">环保咨询</a>
+							</td>
 							<td>
 								
 							</td>
@@ -348,7 +358,9 @@
 							<td>
 								<a href="">智能化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">现代供应链咨询</a>
+							</td>
 							<td>    </td>
 							<th>    </th>
 						</tr>
@@ -390,6 +402,46 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/public.js"></script>
-	<script src="js/about.js"></script>
+	<!-- <script src="js/about.js"></script> -->
+	<script>
+	　　$(".tabbox li").click(function (){
+			var that=$(this);　　　　
+			//获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+	　　　　$(this).addClass("active").siblings().removeClass("active");
+	　　　　//获取选中元素的下标
+	　　　　var index = $(this).index();
+	　　　　$(this).parent().siblings(".content").children().eq(index).css("display","block").siblings().css("display","none");
+			$("tr td a").each(function(index,val){
+				// console.log(that.html())
+				// console.log($(val).html())
+				if(that.html()==$(val).html()){
+					console.log(111)
+					$("tr td").eq(index).children("a").addClass('active').parents().siblings().children("td").children("a").removeClass('active');
+				}
+			})
+	　　});
+		//公司介绍轮播
+		var swiper = new Swiper('.swiper-container', {
+		  navigation: {
+		    nextEl: '.swiper-button-next',
+		    prevEl: '.swiper-button-prev',
+		  },
+		  pagination: {
+		    el: '.swiper-pagination',
+		    clickable :true
+		  }
+		});
+
+		// 其它页面点击底部导航跳转
+		var parameter=window.location.href.split("?")[1];
+		if(parameter){
+			console.log(333)
+			// $(".aboutSelect").children("li").removeClass("active")
+			var data = window.location.href.split("?")[1].split("=")[1];
+			$(".aboutSelect").children("li").eq(data).addClass('active').siblings().removeClass('active');
+			$(".aboutContent").eq(data).css("display","block").siblings(".aboutContent").css("display","none");
+			$(".aboutNav").eq(data).addClass("active").parents("tr").siblings().children("td").children(".aboutNav").removeClass('active');
+		}
+	</script>
 </body>
 </html>

@@ -149,7 +149,7 @@
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
-									<div class="downmenu clear">
+									<div class="downmenu clear" style="width: 132%;margin-left: -16%;">
 										<ul class="downMiddle">
 											<li>
 												<!-- <img src="img/bigdata-icon1.png" class="downIcon"> -->
@@ -159,9 +159,17 @@
 												<!-- <img src="img/sjserve-icon1.png" class="downIcon"> -->
 												<a href="program.html" data-lang="do_bigdata">智能办公</a>
 											</li>
-											<li style="border-bottom: none;">
+											<li>
 												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
 												<a href="program.html" style="text-decoration: none;" data-lang="do_green">系统集成</a>
+											</li>
+											<li>
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">环保咨询</a>
+											</li>
+											<li style="border-bottom: none;">
+												<!-- <img src="img/greenchain-icon1.png" class="downIcon"> -->
+												<a href="program.html" style="text-decoration: none;" data-lang="do_green">现代供应链咨询</a>
 											</li>
 										</ul>
 									</div>
@@ -222,7 +230,7 @@
 	<div class="newsDetails">
 		<div class="center">
 			<div class="newsMain">
-				<h2>生态环境部对外合作与交流中心领导就绿色供应链进行主题演讲</h2>
+				<!-- <h2>生态环境部对外合作与交流中心领导就绿色供应链进行主题演讲</h2>
 				<div class="tips">
 					<p class="time">2019-08-9</p>
 					<span>来源：盈实科技（北京）有限公司</span>
@@ -230,7 +238,7 @@
 				<div class="essay">
 					<p> 2019年7月27日上午，由北京盈实智慧供应链管理有限公司承办的“2019产业供应链论坛”在广州广交会威斯汀酒店盛大开幕，本次论坛以“产业+供应链+金融”为主题进行了别开生面的探讨与交流。工信部、生态环境部、中国物流与采购联合会相关领导出席了论坛并进行了主题演讲</p>
 					<img src="img/news/newsdetails.png" alt="">
-					<p> 论坛上，生态环境部对外合作与交流中心技术交流部环保产业合作室主任刘婷女士就绿色供应链管理政策与实践进行了发言，她讲道，“绿色供应链是实现绿色生产方式的重要途经。”早在2016年，广东东莞就成为全国第一个绿色供应链试点城市，通过加强绿色采购、完善环境信息的披露制度和监管、促进绿色消费，来推动制造业的产业升级和绿色转型。 刘婷表示，绿色供应链是从全产业链进行绿色改造，降低污染排放和环境影响，“依旧可以降低成本，实现经济效益最大化，并且在销售模式中也引导消费者进行绿色采购和消费，推动培育绿色市场。”</p>
+					<p> 论坛上，生态环境部对外合作与交流中心技术交流部环保产业合作室主任刘婷女士就绿色供应链管理政策与实践进行了发言，她讲道，“绿色供应链是实现绿色生产方式的重要途经。”早在2016年，广东东莞就成为全国第一个绿色供应链试点城市，通过加强绿色采购、完善环境信息的披露制度和监管、促进绿色消费，来推动制造业的产业升级和绿色转型。 刘婷表示，绿色供应链是从全产业链进行绿色改造，降低污染排放和环境影响，“依旧可以降低成本，实现经济效益最大化，并且在销售模式中也引导消费者进行绿色采购和消费，推动培育绿色市场。”</p> -->
 				</div>
 			</div>
 		</div>
@@ -312,7 +320,9 @@
 							<td>
 								<a href="">信息化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">环保咨询</a>
+							</td>
 							<td>
 								
 							</td>
@@ -323,7 +333,9 @@
 							<td>
 								<a href="">智能化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">现代供应链咨询</a>
+							</td>
 							<td>    </td>
 							<th>    </th>
 						</tr>
@@ -366,5 +378,38 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/public.js"></script>
+
+	<script>
+		jQuery.support.cors = true;
+
+		var id=window.location.href.split("?")[1].split("&")[1].split("=")[1];
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/news/selectId",
+			data:{id:id},
+			dataType:'JSON',
+			success:function(n){
+				var html='';
+				var news=n.data;
+				console.log(news)
+				html+='<h2>'+news[0].title+'</h2><div class="tips"><p class="time">'+news[0].createdate+'</p><span>来源：盈实科技（北京）有限公司</span></div><div class="essay"><p>'+news[0].content+'</p>';
+				$(".newsMain").prepend(html)
+			}
+
+		})
+
+		//从其它页面跳转进来控制底部导航
+		var parameter=window.location.href.split("?")[1];
+		if(parameter){
+			var param = window.location.href.split("?")[1].split("&")[0].split("=")[1];
+			if(param>=0){
+				$(".newsNav").eq(param).addClass("active");
+			}
+			console.log(param)
+			if(param==5 || param==-1 || param==6){
+				$(".newsTitle").addClass('active');
+			}
+		}
+	</script>
 </body>
 </html>

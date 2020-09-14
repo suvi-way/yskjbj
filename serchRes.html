@@ -95,17 +95,15 @@
 		}
 		.searchCon ul{
 			margin: 35px auto 0;
-			padding: 0 10px;
+			padding: 0 7px;
 			/*width: 75%;*/
 		}
 		.searchCon ul{
 			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
 		}
 		.searchCon ul li{
-			margin-bottom: 50px;
+			float: left;
+			margin: 0 2.5% 50px 2.5%;
 			padding: 9px;
 			width: 30%;
 			border: 1px solid #F7FBF9;
@@ -113,6 +111,14 @@
 			cursor: pointer;
 			border-radius: 3px;
 		}
+		/*左右两边两个li标签margin*/
+		.searchCon ul li:nth-child(3n){
+			margin: 0 0 50px 2.5%;
+		}
+		.searchCon ul li:nth-child(3n+1){
+			margin: 0 2.5% 50px 0;
+		}
+
 		.searchCon ul li:hover{
 			border: 1px solid #017F40;
 			background: rgba(1,127,64,0.05);
@@ -127,6 +133,12 @@
 			font-size: 15px;
 			color: #003E3A;
 			line-height: 36px;
+			text-overflow: -o-ellipsis-lastline;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
 		}
 		.jianjie{
 			font-size: 13px;
@@ -185,10 +197,10 @@
 		<div class="center">
 			<div class="title">
 				<ul class="newsSelect clear">
-					<li class="cur" data-id="0" data-lang="news_total">全部</li>
-					<li data-id="3" data-lang="news_ydyl">媒体报道</li>
-					<li data-id="1" data-lang="news_media">企业资讯</li>
-					<li data-id="2" data-lang="news_qiye">一带一路新闻</li>
+					<li class="cur" data-id="4" data-lang="news_total">全部</li>
+					<li class="" data-id="1" data-lang="news_ydyl">媒体报道</li>
+					<li class="" data-id="2" data-lang="news_media">企业资讯</li>
+					<li class="" data-id="3" data-lang="news_qiye">一带一路新闻</li>
 					
 					<!-- <li data-id="4"></li> -->
 					<!-- <li class="cur">全部</li> -->
@@ -196,8 +208,8 @@
 			</div>
 			<div class="wrap">
 				<div class="searchCon">
-					<ul>
-						<li onclick="goNewsDetails(this)">
+					<ul class="clear">
+						<!-- <li onclick="goNewsDetails(this)">
 							<img src="img/news/news1.png">
 							<h3>多方针对绿色供应链的共建</h3>
 							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
@@ -205,34 +217,7 @@
 								<a href="" target="_blank">MORE></a>
 								<span class="time">8/12</span>
 							</div>
-						</li>
-						<li onclick="goNewsDetails(this)">
-							<img src="img/news/news1.png">
-							<h3>多方针对绿色供应链的共建</h3>
-							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
-							<div class="more flex">
-								<a href="" target="_blank">MORE></a>
-								<span class="time">8/12</span>
-							</div>
-						</li>
-						<li onclick="goNewsDetails(this)">
-							<img src="img/news/news1.png">
-							<h3>多方针对绿色供应链的共建</h3>
-							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
-							<div class="more flex">
-								<a href="" target="_blank">MORE></a>
-								<span class="time">8/12</span>
-							</div>
-						</li>
-						<li>
-							<img src="img/news/news1.png">
-							<h3>多方针对绿色供应链的共建</h3>
-							<p class="jianjie">2019年5月8日上午10点，在盈实科技（北京）有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合有限公司（以下称“盈实科技”）积极推动下，生态环境部对外合</p>
-							<div class="more flex">
-								<a href="" target="_blank">MORE></a>
-								<span class="time">8/12</span>
-							</div>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 				<div class="nosearch">
@@ -318,7 +303,9 @@
 							<td>
 								<a href="">信息化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">环保咨询</a>
+							</td>
 							<td>
 								
 							</td>
@@ -329,7 +316,9 @@
 							<td>
 								<a href="">智能化服务</a>
 							</td>
-							<td>    </td>
+							<td>
+								<a href="program.html">现代供应链咨询</a>
+							</td>
 							<td>    </td>
 							<th>    </th>
 						</tr>
@@ -374,6 +363,68 @@
 	<script src="js/public.js"></script>
 
 	<script>
+		jQuery.support.cors = true;
+		var keyWords=decodeURI(window.location.href.split("?")[1].split("=")[1]);
+		$(".search input").val(keyWords);
+		$.ajax({
+			type:"POST",
+			url:"http://39.100.241.51:81/api/news/selectTitle",
+			data:{title:keyWords},
+			success:function(n){
+				var list=n.data;
+				var html='';
+				if(list.length>0){
+					for(var i=0;i<list.length;i++){
+						var newsList=n.data;
+						var createdate=list[i].createdate;
+						var day=createdate.substring(5,7)
+						var month=createdate.substring(8,10)
+						var time=day.concat("/",month);
+						html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3>'+list[i].title+'</h3><p class="jianjie">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
+					}
+					$(".searchCon ul").html(html);
+				}else{
+					$(".searchCon").hide();
+					$(".nosearch").css("display","block");
+				}
+			}
+		})
+
+		//点击本页搜索按钮
+		$(".searchImg").click(function(){
+			keyWords=$(".searchInput").val();
+			$(".newsSelect li").eq(0).addClass("cur").siblings().removeClass('cur');
+			$("tr th").children("a").eq(2).addClass("active");
+			$("tr td").children("a").removeClass("active");
+			$.ajax({
+				type:"POST",
+				url:"http://39.100.241.51:81/api/news/selectTitle",
+				data:{title:keyWords},
+				success:function(n){
+					var list=n.data;
+					var html='';
+					if(list.length>0){
+						$(".nosearch").hide();
+						$(".searchCon").show();
+						for(var i=0;i<list.length;i++){
+							var newsList=n.data;
+							var createdate=list[i].createdate;
+							var day=createdate.substring(5,7)
+							var month=createdate.substring(8,10)
+							var time=day.concat("/",month);
+							html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3>'+list[i].title+'</h3><p class="jianjie">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
+						}
+						$(".searchCon ul").html(html);
+					}else{
+						$(".searchCon").hide();
+						$(".nosearch").css("display","block");
+					}
+				}
+			})
+		})
+
+
+		//点击选项卡
 		$(".newsSelect li").click(function(){
 			console.log($(this))
 			keyWords=$(".searchInput").val();
@@ -389,34 +440,52 @@
     			}
     		})
     		var id=$(this).attr("data-id");
-    	// 	$.ajax({
-    	// 		type:"POST",
-    	// 		url:"http://39.100.241.51:8080/news/getNewsBytitle?nkid="+id,
-    	// 		data:{title:keyWords},
-    	// 		success:function(n){
-    	// 			var newsList=n.extend.newsList;
-    	// 			if(newsList.length>0){
-					// 	console.log("ccc")
-					// 	$(".nosearch").hide();
-					// 	$(".searchCon").show();
-					// 	var html="";
-					// 	for(var i=0;i<newsList.length;i++){
-					// 		html+='<li class="clear newsMain" data-id="'+newsList[i].id+'"><div class="dataImg fl"><img src="http://39.100.241.51:8080'+newsList[i].newcover+'"></div><div class="dataDescription fl"><h3>'+newsList[i].title+'</h3><p>'+newsList[i].outline+'</p><span class="more" onclick="goNewsDetails(this)">了解更多</span></div></li>';
-					// 	}
-					// 	$(".searchCon ul").html(html);
-					// 	$(".dataDescription h3").mark(keyWords);
-					// }else{
-					// 	console.log("ddd")
-					// 	$(".searchCon").hide();
-					// 	$(".nosearch").css("display","block");
-					// }
-    	// 		}
-    	// 	})
-    		// var newsItem=$(this).html();
-    		// var newsItemIndex=$(this).index()
-    		// sessionStorage.setItem("newsItem",newsItem);
-    		// sessionStorage.setItem("newsItemIndex",newsItemIndex);
+    		$.ajax({
+    			type:"POST",
+    			url:"http://39.100.241.51:81/api/news/selectTitleAll?id="+id,
+    			data:{title:keyWords},
+    			success:function(n){
+    				var list=n.data;
+					var html='';
+					if(list.length>0){
+						$(".nosearch").hide();
+						$(".searchCon").show();
+						for(var i=0;i<list.length;i++){
+							var newsList=n.data;
+							var createdate=list[i].createdate;
+							var day=createdate.substring(5,7)
+							var month=createdate.substring(8,10)
+							var time=day.concat("/",month);
+							html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3>'+list[i].title+'</h3><p class="jianjie">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
+						}
+						$(".searchCon ul").html(html);
+					}else{
+						$(".searchCon").hide();
+						$(".nosearch").css("display","block");
+					}
+    			}
+    		})
     	})
+
+		//点击进入新闻详情
+		$(".searchCon ul").on("click","li",function(){
+			//控制底部导航
+			var li=$(this).parents(".wrap").siblings('.title').find("li");
+			console.log(li)
+			var param;
+			li.each(function(index,val){
+				var className=$(this).attr("class");
+				console.log(className)
+				if(className=="cur"){
+					param=index-1;
+				}
+			})
+
+			var id=$(this).attr("data-id");
+			window.location.href="newsdetails.html?param="+param+"&id="+id;
+		})
+    	
+
 	</script>
 </body>
 </html>

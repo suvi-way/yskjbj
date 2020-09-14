@@ -151,3 +151,6 @@
 .wenhua img{
 	width: 50%;
 }
+.aboutContent{
+	display: none;
+}

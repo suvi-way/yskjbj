@@ -145,17 +145,19 @@
 	color: #fff;
 }
 .work_con li:hover{
-	display: flex;
-	align-items: center;
+	/*display: flex;*/
+	/*align-items: center;*/
     background: linear-gradient(180deg,rgba(1,127,81,1) 0%,rgba(94,209,152,1) 100%);
 }
-.work_con li:hover .curson{
-	/*display: block;*/
+.work_con li:hover h4,.work_con li:hover p{
+	color: #fff;
+}
+/*.work_con li:hover .curson{
 	opacity: 1;
 }
 .work_con li:hover .origin{
 	display: none;
-}
+}*/
 
 
 /*合作伙伴*/
@@ -191,8 +193,8 @@
 	display: block;
 	margin: auto;
 	/*margin-bottom: 20px;*/
-	width: 82%;
-	height: 82%;
+	width: 95%;
+	height: 95%;
 }
 .partner .more{
 	display: block;

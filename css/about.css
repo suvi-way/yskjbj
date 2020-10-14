@@ -9,40 +9,49 @@
 }
 /*选项卡*/
 .tabbox{
-	margin:10px auto;
+	margin:0 auto;
+	padding: 10px 0;
 	min-width: 1200px;
 	background: #F7FBF9;
 }
-.tabbox ul{
+.aboutSelect{
 	position: relative;
 	z-index: 1;
-	margin: -44px auto 0;
-	list-style:none;
-	width: 60%;
-}
-.tabbox ul li{
-	width:100px;
-	width: 130px;
-	height: 40px;
-	line-height: 38px;
-	text-align: center;
-	cursor:pointer;
-	border-radius: 3px;
-	letter-spacing: 1px;
-	font-size: 17px;
-	color: #003E3A;
-}
-.tabbox ul li.active{
-	background-color:#017F40;
-	color:white;
-	/*font-weight:bold;*/
-}
+			margin: -54px 20% 0 20%;
+			/*margin-bottom: 40px;*/
+			/*padding: 60px 0 40px;*/
+			font-size: 18px;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.aboutSelect li{
+			cursor: pointer;
+			width: 15%;
+			margin: 0 9%;
+			padding: 5px 0;
+			font-size: 17px;
+		}
+		.active{
+			background: #017F40;
+			color: #fff;
+			border-radius: 3px;
+		}
+		.aboutContent{
+			display: none;
+			margin: 0 auto;
+			/*margin-bottom: 40px;*/
+			/*width: 62%;*/
+		}
 .tabbox .content{
 	margin: 0 auto;
 	/*width: 60%;*/
 	position: relative;
 }
 .company_info{
+	margin: 0 auto;
+	/*width: 60%;*/
+}
+.companyList{
 	margin: 0 auto;
 	width: 60%;
 }
@@ -61,7 +70,7 @@
 
 .kj_info h3{
 	margin-bottom: 10px;
-	font-size: 18px;
+	font-size: 16px;
 	color: #003E3A;
 }
 .kj_info p{
@@ -71,16 +80,16 @@
 	text-align: justify;
 }
 .other{
-	margin: -27px auto 20px;
+	margin: -27px auto 50px;
 	width: 60%;
 	text-indent: 2em;
     font-size: 14px;
     color: #658684;
     text-align: justify;
 }
-.swiper-container{
+/*.swiper-container{
 	top: 0;
-}
+}*/
 .content .swiper-button-next img,.content .swiper-button-prev img{
 	width: 20px;
 }
@@ -96,13 +105,19 @@
 	top: 30%;
 	transform: translateY(-50%);
 }
-.swiper-slide img{
+.swiper-slide img.infoImg{
 	margin-right: 23px;
+}
+.infoImg{
+	width: 48%;
+}
+.wl_info{
+	width: 52%;
 }
 .tabbox .content .photos{
 	position: relative;
 	display: block;
-	margin: 100px 0 150px;
+	margin: 100px 0 60px;
 	/*margin-left: -40%;*/
 	/*width: 160%;*/
 	height: 110px;
@@ -153,4 +168,93 @@
 }
 .aboutContent{
 	display: none;
+}
+
+@media screen and (max-width: 760px){
+	.banner_swiper .banner_icon2{
+		width: 176px;
+	}
+	.banner_swiper .banner_icon3{
+		width: 120px;
+	}
+
+	.tabbox{
+		min-width: 100%;
+	}
+	.tabbox ul{
+		margin: -30px auto 0;
+		/*padding-top: 15px;*/
+		width: 90%;
+	}
+	.tabbox ul li{
+		font-size: .29rem;
+		height: 30px;
+		flex-shrink: 0;
+	}
+	.aboutSelect li{
+		width: 20%;
+		margin: 0 6.65%;
+	}
+	.tabbox ul li{
+		height: auto;
+	}
+	.line{
+		width: 90%;
+		margin: 20px auto 24px;
+	}
+	.other{
+		margin-bottom: 20px;
+		width: 90%;
+		font-size: .26rem;
+	}
+	.companyList{
+		width: 100%;
+	}
+	.companyList3{
+		display: block !important;
+	}
+	.wl_info{
+		width: 100%;
+	}
+	.company_info{
+		width: 90%;
+	}
+	.swiper-slide img{
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
+	.kj_info h3{
+		font-size: .28rem;
+	}
+	.kj_info p{
+		font-size: .26rem;
+	}
+	.tabbox .content .photos{
+		margin: 40px auto 40px;
+		height: 60px;
+	}
+	.tabbox .content .photos img{
+		width: 100%;
+	}
+	.custructor{
+		margin-top: -25px;
+		width: 90%;
+	}
+	.wenhua{
+		/*margin-top: -25px;*/
+		width: 100%;
+	}
+	.culture{
+		margin-left: .2rem;
+		padding: 0;
+	}
+	.culture h3{
+		margin: 5px 0;
+		font-size: .26rem;
+		line-height: .30rem;
+	}
+	.culture p{
+		font-size: .24rem;
+	}
 }

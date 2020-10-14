@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>项目案例</title>
+	<title>信息化服务</title>
 	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
@@ -14,107 +14,110 @@
 		.banner_swiper img{
 			width: 100%;
 		}
+		.banner_swiper .banner_icon1{
+			top: 27%;
+			width: 136px;
+		}
 		.banner_swiper .banner_icon2{
-			width: 346px;
+			top: 40%;
+			width: 296px;
 		}
 		.banner_swiper .banner_icon3{
-			width: 75px;
+			top: 56%;
+			width: 166px;
 		}
-		
-		.program{
-			padding-bottom: 50px;
-			/*background: red;*/
+
+		.information{
 			min-width: 1200px;
 			background: #F7FBF9;
 		}
-		.program h2{
+		.information ul{
 			position: relative;
-			z-index: 1;
-			margin: -54px 0 0;
-			font-size:20px;
-			color: #003E3A;
-			text-align: center;
+			z-index: 0;
+			margin-top: -74px;
 		}
-		.program .line{
-		    margin: 38px auto;
-		    width: 60%;
-		    height: 1px;
-		    background: #D8D8D8;
+		.information li:nth-child(2n+1){
+			background: #F7FBF9;
 		}
-		.program ul{
+		.information li:nth-child(2n){
+			background: #DFECE6;
+		}
+		.infomationList{
 			margin: 0 auto;
-			width: 60%;
-		}
-		.program ul li{
-			margin-bottom: 38px;
+			padding: 60px 0;
+			width: 65%;
 			align-items: center;
 		}
-		.program ul li .border{
-			width: 3px;
-			height: 120px;
-			background: #017F40;
-			border-radius: 3px;
+		.infomationList>div{
+			width: 50%;
 		}
-		.program ul h3{
-			font-size: 15px;
-			color: #003E3A;
+		.infomationList h3{
+			margin-bottom: 20px;
+		    font-size: 20px;
+		    color: #003E3A; 
 		}
-		.program ul p{
-			margin-top: 18px;
-			font-size: 13px;
-			color: #017F40;
-			opacity: 0.5;
+		.infomationList p{
+			margin-bottom: 20px;
+		    font-size: 14px;
+		    color: #658684;
+		    line-height: 22px;
+		    text-align: justify;
 		}
-		.program ul img{
-			width: 36%;
+		.left{
+			margin-right: 30px;
+			text-align: left;
 		}
-		.program_con{
-			width: 63%;
+		.right{
+			margin-left: 30px;
+			text-align: right;
+		}
+		.infomationList img{
+			width: 50%;
+		}
+		.information li:first-child .infomationList>div{
+			width: 70%;
+		}
+		.information li:first-child img{
+			width: 30%;
 		}
 
 		@media screen and (max-width: 760px){
+			.banner_swiper .banner_icon1{
+				width: 65px;
+			}
 			.banner_swiper .banner_icon2{
+				top: 43%;
 				width: 160px;
 			}
 			.banner_swiper .banner_icon3{
 				top: 64%;
-				width: 50px;
+				width: 90px;
 			}
 
-			.program{
-				padding-bottom: 10px;
+			.information{
 				min-width: 100%;
 			}
-			.program h2{
-				margin-top: -10px;
-				font-size: .32rem;
+			.infomationList{
+				padding: 20px 0;
+				width: 90%;
 			}
-			.program .line{
-				margin: 16px auto 24px;
-				width: 85%;
+			.left{
+				margin-right: 6px;
 			}
-			.program ul{
-				width: 85%;
+			.right{
+				margin-left: 6px;
 			}
-			.program ul li{
-				margin-bottom: 25px;
+			.information ul{
+				margin-top: -15px;
 			}
-			.program ul h3{
+			.infomationList h3{
+				margin-bottom: 8px;
 				font-size: .28rem;
 			}
-			.program ul p{
-				margin-top: 6px;
-				font-size: .24rem;
-				line-height: .3rem;
-			}
-			.program_con1{
-				margin: 0 10px 0 8px !important;
-			}
-			.program_con2{
-				margin: 0 8px 0 10px !important;
-			}
-			.program ul li:nth-child(2n)>img{
-				margin-left: 0 !important;
+			.infomationList p{
+				margin-bottom: 6px;
+			    font-size: .24rem;
+			    line-height: .34rem;
 			}
 		}
 	</style>
@@ -168,7 +171,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="navcon downtitle">
+								<li class="navcon downtitle curson">
 									<!-- <img src="img/do-icon.png" class="boforeIcon"> -->
 									<a href="do.html" data-lang="do_header">
 									公司业务
@@ -202,7 +205,7 @@
 									<a href="partners.html" data-lang="partner_header">合作伙伴</a>
 									<i class="navIcon"></i>
 								</li>
-								<li class="navcon downtitle curson">
+								<li class="navcon downtitle">
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
@@ -268,11 +271,11 @@
 			</div>
 			<div class="banner_swiper">
 				<div class="swiper-container">
-					<img src="img/index/banner.png">
+					<!-- <img src="img/index/banner.png"> -->
 				</div>
-				<img src="img/program/banner_icon1.png" class="banner_icon1">
-				<img src="img/program/banner_icon2.png" class="banner_icon2">
-				<img src="img/program/banner_icon3.png" class="banner_icon3">
+				<img src="img/do/information_icon1.png" class="banner_icon1">
+				<img src="img/do/information_icon2.png" class="banner_icon2">
+				<img src="img/do/information_icon3.png" class="banner_icon3">
 				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
@@ -284,36 +287,36 @@
 		</div>
 	</div>
 
-	<div class="program">
+	<div class="information">
 		<div class="center">
-			<div class="program_title">
-				<h2>项目案例</h2>
-				<p class="line"></p>
-			</div>
 			<ul>
-				<!-- <li class="flex">
-					<img src="img/program/program1.png">
-					<div class="program_con" style="margin: 0 32px 0 18px;">
-						<h3 style="text-align: right;">能源节能</h3>
-						<p>为某航站楼S3006机房两台空调机组进行节能改造及研究；试点改造机组自身节能率达60%；与对照机房相比，节能率达38%；综合节能率36.3%-59.61%，投资回收期3-4年。</p>
+				<!-- <li>
+					<div class="infomationList flex">
+						<div class="left">
+							<h3>信息化服务</h3>
+							<p>以现代通信、网络、数据库技术为基础，对所研究对象各要素汇总至数据库，供特定人群生活、工作、学习、辅助决策等和人类息息相关的各种行为相结合的一种技术，使用该技术后，可以极大的提高各种行为的效率，为推动人类社会进步提供极大的技术支持。</p>
+							<p>信息化具有易用性、健壮性、平台化（灵活性、拓展性）、安全性、门户化（整合性）、移动性的特点。盈实愿发挥自身优势，为客户提供个性化、智慧化、数据化支持的开发、集成，服务智能生态圈。</p>
+						</div>
+						<img src="img/do/information1.png" class="right">
 					</div>
-					<div class="border"></div>
 				</li>
-				<li class="flex" style="background: rgba(1,127,64,0.06);">
-					<div class="border"></div>
-					<div class="program_con" style="margin-left: 32px;">
-						<h3>智能办公</h3>
-						<p>根据需求个性化定制智能系统方案，实现办公室的高效管理，营造舒适的办公环境，同时节能减耗，降低维护成本。</p>
+				<li>
+					<div class="infomationList flex">
+						<img src="img/do/information2.png" class="left">
+						<div class="right">
+							<h3>案例1—APP应用开发、集成</h3>
+							<p>未来科技城城某大型综合写字楼园区，利用移动APP，解决园区内餐饮、超市、门禁、车辆出入、办公、会议等一系列生活、工作应用。即为员工提供了便利，商家提供了平台，又为管理方提供了便捷。</p>
+						</div>
 					</div>
-					<img src="img/program/program2.png" style="margin-left: 18px;">
 				</li>
-				<li class="flex">
-					<img src="img/program/program3.png">
-					<div class="program_con" style="margin: 0 32px 0 18px;">
-						<h3 style="text-align: right;">系统集成</h3>
-						<p>仙桃国际大数据谷位于重庆市渝北区，做为西部重要的科技技术产业中心园区， 围绕中国大数据产业生态谷的总体目标，坚持技术创新、模式创新、业态创新、协同创新，集中优势资源着力发展大数据产业，形成自主可控的大数据产业链、价值链和生态系统。园区整体规划面积2平方公里，总建设规模约175万平方米，预计静态建设投资约127亿元。</p>
+				<li>
+					<div class="infomationList flex">
+						<div class="left">
+							<h3>案例2—移动办公</h3>
+							<p>某国有旅游单位办公OA系统，PC端、手机端实时同步，轻松实现远程移动办公。</p>
+						</div>
+						<img src="img/do/information3.png" class="right">
 					</div>
-					<div class="border"></div>
 				</li> -->
 			</ul>
 		</div>
@@ -329,10 +332,10 @@
 								<a href="about.html">关于我们</a>
 							</th>
 							<th class="bottom_title">
-								<a href="">公司业务</a>
+								<a href="do.html" class="active">公司业务</a>
 							</th>
 							<th class="bottom_title">
-								<a href="program.html" class="active">项目案例</a>
+								<a href="program.html">项目案例</a>
 							</th>
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
@@ -343,7 +346,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="about.html" class=" aboutNav">公司介绍</a>
+								<a href="about.html" class="aboutNav">公司介绍</a>
 							</td>
 							<td>
 								<a href="bighealth.html">大健康</a>
@@ -393,7 +396,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="informationize.html">信息化服务</a>
+								<a href="informationize.html" class="active">信息化服务</a>
 							</td>
 							<td>
 								<a href="program.html">环保咨询</a>
@@ -454,26 +457,41 @@
 	<script src="js/public.js"></script>
 	<script>
 		jQuery.support.cors = true;
+
+		//数据对接
 		$.ajax({
 			type:"GET",
-			url: "http://39.100.241.51:81/api/cases/list",
+			url: "http://39.100.241.51:81/api/bussiness/promotion",
 			data:"",
 			dataType:'JSON',
 			success:function(n){
-				var html='';
-				var list=n.data;
-				// var k=1;
-				for(var i=0;i<list.length;i++){
-					// console.log(i,2*k)
+				var html="";
+				var banner=n.data;
+				html+='<img src="http://39.100.241.51:81/'+banner[0].byid_pictures+'">';
+				$(".swiper-container").prepend(html);
+			}
+		})
+
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/bussiness/promotion",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var html="";
+				var info=n.data;
+				for(var i=0;i<info.length;i++){
+					if(info[i].titles==null){
+						console.log(i)
+						info[i].titles="";
+					}
 					if(i%2==0){
-						// console.log(i)
-						html+='<li class="flex"><img src="http://39.100.241.51:81/'+list[i].casepicture+'"><div class="program_con1 program_con" style="margin: 0 32px 0 18px;"><h3 style="text-align: right;">'+list[i].name+'</h3><p>'+list[i].title+'</p></div><div class="border"></div></li>'
+						html+='<li><div class="infomationList flex"><div class="left"><h3>'+info[i].business_name+'</h3><p>'+info[i].title+'</p><p>'+info[i].titles+'</p></div><img src="http://39.100.241.51:81/'+info[i].picture+'" class="right"></div></li>';
 					}else{
-						// console.log(i)
-						html+='<li class="flex" style="background: rgba(1,127,64,0.06);"><div class="border"></div><div class="program_con2 program_con" style="margin-left: 32px;"><h3>'+list[i].name+'</h3><p>'+list[i].title+'</p></div><img src="http://39.100.241.51:81/'+list[i].casepicture+'" style="margin-left: 18px;"></li>'
+						html+='<li><div class="infomationList flex"><img src="http://39.100.241.51:81/'+info[i].picture+'" class="left"><div class="right"><h3>'+info[i].business_name+'</h3><p>'+info[i].title+'</p><p>'+info[i].titles+'</p></div></div></li>';
 					}
 				}
-				$(".program ul").prepend(html);
+				$(".information ul").prepend(html);
 			}
 		})
 	</script>

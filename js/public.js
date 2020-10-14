@@ -25,6 +25,33 @@ $(".en").click(function(){//英文切中文
 	$(".ch").removeClass('now_lan');
 })
 
+$(".downtitle").click(function(e){
+	if(e.target.className.indexOf("downtitle")!=-1){
+		var href=$(this).children("a").attr("href");
+		window.location.href=href;
+	}
+})
+
+// 二级导航跳转
+$(".downMiddle li").click(function(){
+	var href=$(this).children("a").attr("href");
+	window.location.href=href;
+})
+
+//手机端导航右侧按钮背景颜色控制
+var toggle=true;
+$(".navbar-toggle").click(function(){
+	if(toggle){
+		console.log($(this))
+		$(this).css("background-color","#ddd");
+		toggle=false;
+	}else{
+		$(this).css("background-color","#fff");
+		toggle=true;
+	}
+})
+
+
 // 导航下拉框显示隐藏
 $(".downtitle").mouseover(function(){
 	// console.log($(this).children('a'))

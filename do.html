@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/resize.js"></script>
 	<style>
 		.banner_swiper img{
 			width: 100%;
@@ -17,12 +18,12 @@
 			width: 346px;
 		}
 		.banner_swiper .banner_icon3{
-			top: 265px;
+			top: 51%;
 			width: 110px;
 		}
 
 		.doContent{
-			margin-bottom: 50px;
+			padding-bottom: 50px;
 			/*background: red;*/
 			min-width: 1200px;
 			background: #F7FBF9;
@@ -31,7 +32,7 @@
 			position: relative;
 			z-index: 1;
 			margin: -54px 0 0;
-			font-size: 17px;
+			font-size: 20px;
 			color: #003E3A;
 			text-align: center;
 		}
@@ -114,6 +115,48 @@
 		.work_con li:hover .origin{
 			display: none;
 		}*/
+
+		@media screen and (max-width: 760px){
+			.banner_swiper .banner_icon2{
+				width: 180px;
+			}
+			.banner_swiper .banner_icon3{
+				top: 60%;
+				width: 66px;
+			}
+
+			.doContent{
+				padding-bottom: 20px;
+				min-width: 100%;
+			}
+			.doContent h2{
+				margin-top: -10px;
+				font-size: .32rem;
+			}
+			.doContent .line{
+				margin: 16px auto 24px;
+				width: 85%;
+			}
+			.work_con{
+				width: 85%;
+			}
+			.work_con li {
+			    margin-bottom: 15px;
+			    width: 48%;
+			    height: 120px;
+			}
+			.work_con img {
+			    margin-top: 10px;
+			    width: 38px;
+			}
+			.work_con li h4 {
+			    margin: 7px 0;
+			    font-size: .26rem;
+			}
+			.work_con li p {
+			    font-size: .21rem;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -124,7 +167,7 @@
 				<div class="container">
 					<nav class="navbar navbar-default">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="isShow()">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -174,22 +217,22 @@
 									<div class="downmenu clear" style="width: 120%;margin-left: -10%;">
 										<ul class="downMiddle">
 											<li>
-												<a href="do.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
+												<a href="bighealth.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
 											</li>
 											<li>
-												<a href="http://greenbr.org.cn/" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
+												<a href="supplyChain.html" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
+												<a href="bigdata.html" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
+												<a href="informationize.html" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
+												<a href="intelligent.html" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
 											</li>
 											<li style="border-bottom: none;">
-												<a href="do-threeservice.html" style="text-decoration: none;" data-lang="do_three">咨询规划服务</a>
+												<a href="environment.html" style="text-decoration: none;" data-lang="do_three">环保服务</a>
 											</li>
 										</ul>
 									</div>
@@ -270,13 +313,13 @@
 				<img src="img/do/banner_icon1.png" class="banner_icon1">
 				<img src="img/do/banner_icon2.png" class="banner_icon2">
 				<img src="img/do/banner_icon3.png" class="banner_icon3">
-				<div class="language">
+				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
 					<span>|</span>
 					<span class="en">English</span>
 					<span style="color: #00B85C;">]</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -346,13 +389,13 @@
 				<li class="second">
 					<div class="origin">
 						<img src="img/index/work_icon6.png">
-						<h4>咨询规划服务</h4>
+						<h4>环保服务</h4>
 						<p>环保咨询、供应链咨询等</p>
 					</div>
 					<div class="curson">
 						<img src="img/index/work_image9.png" alt="">
 						<img src="img/index/work_image10.png">
-						<p>我司咨询规划服务项目与中物联现代供应链研究院、中绿实业有限公司合作</p>
+						<p>我司环保服务项目与中物联现代供应链研究院、中绿实业有限公司合作</p>
 					</div>
 				</li> -->
 			</ul>
@@ -377,7 +420,7 @@
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
 							</th>
-							<th class="bottom_title">
+							<th class="bottom_title" style="padding-right: 0;text-align: center;">
 								<a href="index.html">网站首页</a>
 							</th>
 						</tr>
@@ -386,7 +429,7 @@
 								<a href="about.html" class=" aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -394,7 +437,7 @@
 							<td>
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
-							<th style="padding-bottom: 6px;">
+							<th style="padding-bottom: 6px;padding-right: 0;text-align: center;">
 								<a href="partners.html">合作伙伴</a>
 							</th>
 						</tr>
@@ -403,7 +446,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="">供应链</a>
+								<a href="supplyChain.html">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -411,7 +454,7 @@
 							<td>
 								<a href="news.html?data=1" class="newsNav">企业资讯</a>
 							</td>
-							<th>
+							<th style="padding-right: 0;text-align: center;">
 								<a href="concat.html">联系我们</a>
 							</th>
 						</tr>
@@ -420,7 +463,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="">大数据服务</a>
+								<a href="bigdata.html">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -433,7 +476,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="">信息化服务</a>
+								<a href="informationize.html">信息化服务</a>
 							</td>
 							<td>
 								<a href="program.html">环保咨询</a>
@@ -446,7 +489,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">智能化服务</a>
+								<a href="intelligent.html">智能化服务</a>
 							</td>
 							<td>
 								<a href="program.html">现代供应链咨询</a>
@@ -457,7 +500,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">咨询规划服务</a>
+								<a href="environment.html">环保服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -487,7 +530,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：京ICP备18061162号-1
 	</div>
 
 	<script src="js/bootstrap.min.js"></script>
@@ -507,7 +550,7 @@
 					if(list[i].titles==null){
 						list[i].titles="";
 					}
-					html+='<li class="first"><div class="origin"><img src="http://39.100.241.51:81/'+list[i].picture+'"><h4>'+list[i].name+'</h4><p>'+list[i].title+'</p><p>'+list[i].titles+'</p></div></li>'
+					html+='<li class="first" data-href="'+list[i].href+'"><div class="origin"><img src="http://39.100.241.51:81/'+list[i].picture+'"><h4>'+list[i].name+'</h4><p>'+list[i].title+'</p><p>'+list[i].titles+'</p></div></li>'
 				}
 				$(".work_con").prepend(html);
 
@@ -518,6 +561,13 @@
 					})
 					$(v).mouseout(function(){
 						$(this).find("img").attr("src","http://39.100.241.51:81/"+list[i].picture)
+					})
+				})
+
+				//点击跳转到对应页面
+				$(".work_con li").each(function(i,v){
+					$(v).click(function(){
+						window.location.href=$(this).attr("data-href");
 					})
 				})
 			}

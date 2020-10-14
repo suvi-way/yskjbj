@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/resize.js"></script>
 	<style>
 		.banner_swiper img{
 			width: 100%;
@@ -81,6 +82,49 @@
 			text-align: center;
 		}
 
+		@media screen and (max-width: 760px){
+			.banner_swiper .banner_icon2{
+				width: 170px;
+			}
+			.banner_swiper .banner_icon3{
+				width: 50px;
+			}
+			.zhengfu{
+				margin-top: -40px !important;
+			}{
+				padding-bottom: 20px;
+			}
+			.partnerList{
+				padding-bottom: 20px;
+			}
+			.partnerList h3{
+				font-size: .24rem;
+			}
+			.partnerList h3 img{
+				margin-right: 5px;
+				width: 3px;
+			}
+			.partnerContent{
+				width: 90%;
+			}
+			.swiper-slide{
+				/*width: 20% !important;*/
+				/*margin-right: 10px !important;*/
+			}
+			.swiper-slide p{
+				font-size: .21rem;
+			}
+			.swiper-pagination{
+				display: block;
+			}
+			.swiper-pagination-bullet{
+				width: 30px;
+			}
+			.swiper-pagination-bullets .swiper-pagination-bullet{
+				margin: 0 3px;
+			}
+		}
+
 	</style>
 </head>
 <body>
@@ -141,22 +185,22 @@
 									<div class="downmenu clear" style="width: 120%;margin-left: -10%;">
 										<ul class="downMiddle">
 											<li>
-												<a href="do.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
+												<a href="bighealth.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
 											</li>
 											<li>
-												<a href="http://greenbr.org.cn/" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
+												<a href="supplyChain.html" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
+												<a href="bigdata.html" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
+												<a href="informationize.html" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
+												<a href="intelligent.html" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
 											</li>
 											<li style="border-bottom: none;">
-												<a href="do-threeservice.html" style="text-decoration: none;" data-lang="do_three">咨询规划服务</a>
+												<a href="environment.html" style="text-decoration: none;" data-lang="do_three">环保服务</a>
 											</li>
 										</ul>
 									</div>
@@ -237,13 +281,13 @@
 				<img src="img/partners/banner_icon1.png" class="banner_icon1">
 				<img src="img/partners/banner_icon2.png" class="banner_icon2">
 				<img src="img/partners/banner_icon3.png" class="banner_icon3">
-				<div class="language">
+				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
 					<span>|</span>
 					<span class="en">English</span>
 					<span style="color: #00B85C;">]</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -252,7 +296,7 @@
 		<div class="center">
 			<div class="partnerContent">
 				<div class="partnerList">
-					<h3 style="margin-top: -64px;">
+					<h3 class="zhengfu" style="margin-top: -64px;">
 						<img src="img/partners/icon.png">
 						政府机构
 					</h3>
@@ -353,7 +397,7 @@
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
 							</th>
-							<th class="bottom_title">
+							<th class="bottom_title" style="padding-right: 0;text-align: center;">
 								<a href="index.html">网站首页</a>
 							</th>
 						</tr>
@@ -362,7 +406,7 @@
 								<a href="about.html" class=" aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -370,7 +414,7 @@
 							<td>
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
-							<th style="padding-bottom: 6px;">
+							<th style="padding-bottom: 6px;padding-right: 0;text-align: center;">
 								<a href="partners.html" class="active">合作伙伴</a>
 							</th>
 						</tr>
@@ -379,7 +423,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="">供应链</a>
+								<a href="supplyChain.html">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -387,7 +431,7 @@
 							<td>
 								<a href="news.html?data=1" class="newsNav">企业资讯</a>
 							</td>
-							<th>
+							<th style="padding-right: 0;text-align: center;">
 								<a href="concat.html">联系我们</a>
 							</th>
 						</tr>
@@ -396,7 +440,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="">大数据服务</a>
+								<a href="bigdata.html">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -409,7 +453,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="">信息化服务</a>
+								<a href="informationize.html">信息化服务</a>
 							</td>
 							<td>
 								<a href="program.html">环保咨询</a>
@@ -422,7 +466,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">智能化服务</a>
+								<a href="intelligent.html">智能化服务</a>
 							</td>
 							<td>
 								<a href="program.html">现代供应链咨询</a>
@@ -433,7 +477,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">咨询规划服务</a>
+								<a href="environment.html">环保服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -463,7 +507,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：京ICP备18061162号-1
 	</div>
 	
 	<script src="js/bootstrap.min.js"></script>
@@ -489,8 +533,23 @@
 				}
 				$(".swiper-wrapper1").prepend(html);
 
-				
-				var swiper1 = new Swiper('.swiper-container1', {
+				var swiper1;
+			    if($(window).width()<=760){
+			    	console.log(999)
+			    	swiper1 = new Swiper('.swiper-container1', {
+				      slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
+				      slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
+				      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
+				      slidesPerColumnFill:"row",//多行布局中以什么形式填充.'column'（列）,'row'（行）
+				      spaceBetween: 6,
+				      pagination: {
+				      	// show:false,
+				        el: '.swiper-pagination1',
+				        clickable: true,
+				      }
+			    });
+			    }else{
+			    	swiper1= new Swiper('.swiper-container1', {
 			      slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
 			      slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
 			      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
@@ -502,6 +561,7 @@
 			        clickable: true,
 			      }
 			    });
+			    }
 			}
 		})
 
@@ -522,7 +582,22 @@
 				}
 				$(".swiper-wrapper2").prepend(html);
 
-				var swiper2 = new Swiper('.swiper-container2', {
+				var swiper2;
+				
+				if($(window).width()<=760){
+					swiper2 = new Swiper('.swiper-container2', {
+					  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
+					  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
+				      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
+				      slidesPerColumnFill:"row",//多行布局中以什么形式填充.'column'（列）,'row'（行）
+				      spaceBetween: 10,
+					  pagination: {
+					    el: '.swiper-pagination2',
+					    clickable :true
+					  }
+				});
+				}else{
+					swiper2 = new Swiper('.swiper-container2', {
 				  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
 				  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
 			      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
@@ -533,6 +608,7 @@
 				    clickable :true
 				  }
 				});
+				}
 			}
 		})
 
@@ -552,7 +628,22 @@
 				}
 				$(".swiper-wrapper3").prepend(html);
 
-				var swiper3 = new Swiper('.swiper-container3', {
+				var swiper3;
+				
+				if($(window).width()<=760){
+					swiper3 = new Swiper('.swiper-container3', {
+					  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
+					  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
+				      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
+				      slidesPerColumnFill:"row",//多行布局中以什么形式填充.'column'（列）,'row'（行）
+				      spaceBetween: 10,
+					  pagination: {
+					    el: '.swiper-pagination3',
+					    clickable :true
+					  }
+				});
+				}else{
+					swiper3 = new Swiper('.swiper-container3', {
 				  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
 				  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
 			      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
@@ -563,6 +654,7 @@
 				    clickable :true
 				  }
 				});
+				}
 			}
 		})
 
@@ -582,7 +674,22 @@
 				}
 				$(".swiper-wrapper4").prepend(html);
 
-				var swiper4 = new Swiper('.swiper-container4', {
+				var swiper4;
+				
+				if($(window).width()<=760){
+					swiper4 = new Swiper('.swiper-container4', {
+					  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
+					  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
+				      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
+				      slidesPerColumnFill:"row",//多行布局中以什么形式填充.'column'（列）,'row'（行）
+				      spaceBetween: 10,
+					  pagination: {
+					    el: '.swiper-pagination4',
+					    clickable :true
+					  }
+					})
+				}else{
+					swiper4 = new Swiper('.swiper-container4', {
 				  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
 				  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
 			      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
@@ -593,6 +700,7 @@
 				    clickable :true
 				  }
 				});
+				}
 			}
 		})
 
@@ -612,7 +720,22 @@
 				}
 				$(".swiper-wrapper5").prepend(html);
 
-				var swiper5 = new Swiper('.swiper-container5', {
+				var swiper5;
+				
+				if($(window).width()<=760){
+					swiper5 = new Swiper('.swiper-container5', {
+					  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
+					  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
+				      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
+				      slidesPerColumnFill:"row",//多行布局中以什么形式填充.'column'（列）,'row'（行）
+				      spaceBetween: 10,
+					  pagination: {
+					    el: '.swiper-pagination5',
+					    clickable :true
+					  }
+				});
+				}else{
+					swiper5 = new Swiper('.swiper-container5', {
 				  slidesPerView: 5,//设置slider容器能够同时显示的slides数量(carousel模式)
 				  slidesPerGroup : 5,//在carousel mode下定义slides的数量多少为一组
 			      slidesPerColumn: 2,//设置多行布局里面每列的slide数量
@@ -623,6 +746,7 @@
 				    clickable :true
 				  }
 				});
+				}
 			}
 		})
 

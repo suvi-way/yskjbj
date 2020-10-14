@@ -57,7 +57,8 @@
 			background: #F7FBF9;
 		}
 		.wrap{
-			margin: 0 auto 46px;
+			margin: 0 auto;
+			padding-bottom: 46px;
 			width: 72%;
 		}
 		.title{
@@ -133,24 +134,24 @@
 			font-size: 15px;
 			color: #003E3A;
 			line-height: 36px;
-			text-overflow: -o-ellipsis-lastline;
+			/*text-overflow: -o-ellipsis-lastline;
 		    overflow: hidden;
 		    text-overflow: ellipsis;
 			display: -webkit-box;
 			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;
+			-webkit-box-orient: vertical;*/
 		}
 		.jianjie{
 			font-size: 13px;
 			color: #666;
 			text-align: justify;
-			text-overflow: -o-ellipsis-lastline;
+			/*text-overflow: -o-ellipsis-lastline;
 		    overflow: hidden;
 		    line-height: 18px;
 			text-overflow: ellipsis;
 			display: -webkit-box;
 			-webkit-line-clamp: 3;
-			-webkit-box-orient: vertical;
+			-webkit-box-orient: vertical;*/
 		}
 		.more{
 			margin: 25px 0 25px;
@@ -182,14 +183,11 @@
 				<input type="text" name="" placeholder="搜索新闻..." class="searchInput">
 				<img src="img/news/search.png" class="search searchImg">
 			</div>
-			<div class="language fr">
-				<!-- <span style="color: #00B85C;">[</span> -->
-				
+			<!-- <div class="language fr">
 				<span class="en">English</span>
 				<span style="margin: 0 7px;">|</span>
 				<span class="ch now_lan">中文</span>
-				<!-- <span style="color: #00B85C;">]</span> -->
-			</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -200,7 +198,7 @@
 					<li class="cur" data-id="4" data-lang="news_total">全部</li>
 					<li class="" data-id="1" data-lang="news_ydyl">媒体报道</li>
 					<li class="" data-id="2" data-lang="news_media">企业资讯</li>
-					<li class="" data-id="3" data-lang="news_qiye">一带一路新闻</li>
+					<li class="" data-id="3" data-lang="news_qiye">一带一路</li>
 					
 					<!-- <li data-id="4"></li> -->
 					<!-- <li class="cur">全部</li> -->
@@ -245,7 +243,7 @@
 							<th class="bottom_title">
 								<a href="news.html" class="active">新闻资讯</a>
 							</th>
-							<th class="bottom_title">
+							<th class="bottom_title" style="padding-right: 0;text-align: center;">
 								<a href="index.html">网站首页</a>
 							</th>
 						</tr>
@@ -254,7 +252,7 @@
 								<a href="about.html" class=" aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -262,7 +260,7 @@
 							<td>
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
-							<th style="padding-bottom: 6px;">
+							<th style="padding-bottom: 6px;padding-right: 0;text-align: center;">
 								<a href="partners.html">合作伙伴</a>
 							</th>
 						</tr>
@@ -271,7 +269,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="">供应链</a>
+								<a href="supplyChain.html">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -279,7 +277,7 @@
 							<td>
 								<a href="news.html?data=1" class="newsNav">企业资讯</a>
 							</td>
-							<th>
+							<th style="padding-right: 0;text-align: center;">
 								<a href="concat.html">联系我们</a>
 							</th>
 						</tr>
@@ -288,7 +286,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="">大数据服务</a>
+								<a href="bigdata.html">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -301,7 +299,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="">信息化服务</a>
+								<a href="informationize.html">信息化服务</a>
 							</td>
 							<td>
 								<a href="program.html">环保咨询</a>
@@ -314,7 +312,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">智能化服务</a>
+								<a href="intelligent.html">智能化服务</a>
 							</td>
 							<td>
 								<a href="program.html">现代供应链咨询</a>
@@ -325,7 +323,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">咨询规划服务</a>
+								<a href="environment.html">环保服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -355,7 +353,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：京ICP备18061162号-1
 	</div>
 
 	<script src="js/bootstrap.min.js"></script>
@@ -380,9 +378,34 @@
 						var day=createdate.substring(5,7)
 						var month=createdate.substring(8,10)
 						var time=day.concat("/",month);
-						html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3>'+list[i].title+'</h3><p class="jianjie">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
+						html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3 data-ellipsiss="true">'+list[i].title+'</h3><p class="jianjie" data-ellipsis="true">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
 					}
 					$(".searchCon ul").html(html);
+					var href1 = "js/jquery.ellipsis.js";
+			        var head= document.getElementsByTagName('head')[0];
+			        var script1= document.createElement('script');
+			        script1.type= 'text/javascript';
+			        script1.src= href1;
+			        head.appendChild(script1);
+
+			        var href2 = "js/jquery.ellipsis.unobtrusive.js";
+			        var script2= document.createElement('script');
+			        script2.type= 'text/javascript';
+			        script2.src= href2;
+			        head.appendChild(script2);
+
+			        var href3 = "js/ellipsis.js";
+			        var head= document.getElementsByTagName('head')[0];
+			        var script3= document.createElement('script');
+			        script3.type= 'text/javascript';
+			        script3.src= href3;
+			        head.appendChild(script3);
+
+			        var href4 = "js/ellipsis.unobtrusive.js";
+			        var script4= document.createElement('script');
+			        script4.type= 'text/javascript';
+			        script4.src= href4;
+			        head.appendChild(script4);
 				}else{
 					$(".searchCon").hide();
 					$(".nosearch").css("display","block");
@@ -394,8 +417,8 @@
 		$(".searchImg").click(function(){
 			keyWords=$(".searchInput").val();
 			$(".newsSelect li").eq(0).addClass("cur").siblings().removeClass('cur');
-			$("tr th").children("a").eq(2).addClass("active");
-			$("tr td").children("a").removeClass("active");
+			// $("tr th").children("a").eq(2).addClass("active");
+			// $("tr td").children("a").removeClass("active");
 			$.ajax({
 				type:"POST",
 				url:"http://39.100.241.51:81/api/news/selectTitle",
@@ -412,9 +435,35 @@
 							var day=createdate.substring(5,7)
 							var month=createdate.substring(8,10)
 							var time=day.concat("/",month);
-							html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3>'+list[i].title+'</h3><p class="jianjie">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
+							html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3 data-ellipsiss="true">'+list[i].title+'</h3><p class="jianjie" data-ellipsis="true">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
 						}
 						$(".searchCon ul").html(html);
+
+						var href1 = "js/jquery.ellipsis.js";
+				        var head= document.getElementsByTagName('head')[0];
+				        var script1= document.createElement('script');
+				        script1.type= 'text/javascript';
+				        script1.src= href1;
+				        head.appendChild(script1);
+
+				        var href2 = "js/jquery.ellipsis.unobtrusive.js";
+				        var script2= document.createElement('script');
+				        script2.type= 'text/javascript';
+				        script2.src= href2;
+				        head.appendChild(script2);
+
+				        var href3 = "js/ellipsis.js";
+				        var head= document.getElementsByTagName('head')[0];
+				        var script3= document.createElement('script');
+				        script3.type= 'text/javascript';
+				        script3.src= href3;
+				        head.appendChild(script3);
+
+				        var href4 = "js/ellipsis.unobtrusive.js";
+				        var script4= document.createElement('script');
+				        script4.type= 'text/javascript';
+				        script4.src= href4;
+				        head.appendChild(script4);
 					}else{
 						$(".searchCon").hide();
 						$(".nosearch").css("display","block");
@@ -432,11 +481,11 @@
     		$(this).addClass("cur").siblings().removeClass("cur");
     		$("tr td a").each(function(index,val){
     			if(that.html()==val.innerHTML){
-    				$("tr td").eq(index).children("a").addClass('activeNav').parents().siblings().children("td").children("a").removeClass('activeNav');
-    				$("tr th").children("a").removeClass('activeNav');
+    				$("tr td").eq(index).children("a").addClass('active').parents().siblings().children("td").children("a").removeClass('active');
+    				// $("tr th").children("a").removeClass('active');
     			}else if(that.html()=="全部"){
-    				$(".newsTitle").addClass("activeNav");
-    				$("tr td").children('a').removeClass("activeNav");
+    				$(".newsTitle").addClass("active");
+    				$("tr td").children('a').removeClass("active");
     			}
     		})
     		var id=$(this).attr("data-id");
@@ -456,9 +505,36 @@
 							var day=createdate.substring(5,7)
 							var month=createdate.substring(8,10)
 							var time=day.concat("/",month);
-							html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3>'+list[i].title+'</h3><p class="jianjie">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
+							html+='<li data-id="'+list[i].id+'"><img src="http://39.100.241.51:81/'+list[i].newcover+'"><h3 data-ellipsiss="true">'+list[i].title+'</h3><p class="jianjie" data-ellipsis="true">'+list[i].outline+'</p><div class="more flex"><a target="_blank">MORE></a><span class="time">'+time+'</span></div></li>'
 						}
 						$(".searchCon ul").html(html);
+
+						var href1 = "js/jquery.ellipsis.js";
+				        var head= document.getElementsByTagName('head')[0];
+				        var script1= document.createElement('script');
+				        script1.type= 'text/javascript';
+				        script1.src= href1;
+				        head.appendChild(script1);
+
+				        var href2 = "js/jquery.ellipsis.unobtrusive.js";
+				        var script2= document.createElement('script');
+				        script2.type= 'text/javascript';
+				        script2.src= href2;
+				        head.appendChild(script2);
+
+				        var href3 = "js/ellipsis.js";
+				        var head= document.getElementsByTagName('head')[0];
+				        var script3= document.createElement('script');
+				        script3.type= 'text/javascript';
+				        script3.src= href3;
+				        head.appendChild(script3);
+
+				        var href4 = "js/ellipsis.unobtrusive.js";
+				        var script4= document.createElement('script');
+				        script4.type= 'text/javascript';
+				        script4.src= href4;
+				        head.appendChild(script4);
+						
 					}else{
 						$(".searchCon").hide();
 						$(".nosearch").css("display","block");
@@ -482,7 +558,7 @@
 			})
 
 			var id=$(this).attr("data-id");
-			window.location.href="newsdetails.html?param="+param+"&id="+id;
+			window.location.href="newsDetails.html?param="+param+"&id="+id;
 		})
     	
 

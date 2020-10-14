@@ -9,7 +9,21 @@
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/resize.js"></script>
 	<style>
+		.banner{
+			background: #f1f1f1;
+			z-index: 2;
+		}
+		.container{
+			background: #f1f1f1;
+		}
+		.navbar-default{
+			background: #f1f1f1;
+		}
+		.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+			background: #f1f1f1;
+		}
 		.banner_swiper img{
 			width: 100%;
 		}
@@ -162,7 +176,7 @@
 			background: #fff;
 			border-radius: 13px;
 			box-sizing: border-box;
-			0px 0px 13px 0px rgba(194,194,194,0.2);
+			box-shadow: 0px 0px 13px 0px rgba(194,194,194,0.2);
 		}
 		.message h3{
 			padding: 40px 0 30px;
@@ -257,6 +271,167 @@
 			font-size: 12px;
 			cursor: pointer;
 		}
+
+		@media screen and (max-width: 760px){
+			.banner_swiper .banner_icon1{
+				top: 18%;
+			}
+			.banner_swiper .banner_icon2{
+				top: 34%;
+				width: 160px;
+			}
+			.banner_swiper .banner_icon3{
+				top: 58%;
+				width: 80px;
+			}
+			.position{
+				min-width: 100%;
+			}
+			.ji1{
+				z-index: 1 !important;
+				margin-top: -15px !important;
+			}
+
+			.liuyan{
+				position: relative;
+				bottom: 68px;
+			}
+			.position ul li{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: .1rem .2rem;
+				font-size: .24rem;
+				text-align: center;
+				/*line-height: 0;*/
+			}
+			.position ul li img{
+				width: 2px;
+			}
+			.tishi{
+				flex: 1;
+				margin-top: 0;
+				padding-left: 0;
+				padding-right: 0;
+				text-align: center;
+				/*line-height: .4rem;*/
+			}
+			.mes{
+				margin-top: 0;
+				flex: 2;
+				padding-left: 0;
+				/*line-height: .4rem;*/
+			}
+			.position ul li .icon{
+				margin-right: 0;
+			}
+			.icon{
+				margin-right: .1rem;
+				width: .35rem !important;
+			}
+			.tishi1{
+				margin-top: 0 !important;
+			}
+			.position ul li img.fenge1{
+				margin-top: 15px !important;
+			}
+			.mes1{
+				margin-top: 0 !important;
+			}
+
+			.recruit{
+				min-width: 100%;
+			}
+			.recruit h3{
+				line-height: 1rem;
+				font-size: .3rem;
+			}
+			.recruit h3 img{
+				margin-right: .1rem;
+				width: .5rem;
+			}
+			.recruit > ul > li{
+				position: static;
+				padding: .2rem 0;
+				width: 100%;
+				text-align: center;
+			}
+			.recruit ul>li{
+				padding: 5% 0;
+				width: 100%;
+			}
+			.recruit > ul > li img{
+				display: inline-block;
+				margin-right: .1rem;
+				margin-bottom: 0;
+				width: .6rem;
+			}
+			.recruit > ul > li .name p{
+				display: inline-block;
+				font-size: .3rem;
+				vertical-align: middle;
+			}
+			.recruit ul li img{
+				margin-bottom: 0px;
+			}
+			.recruit ul li>p{
+				font-size: .28rem;
+			}
+			.name{
+				padding: .1rem 0;
+				background: #f1f1f1;
+			}
+			.details{
+				position: static;
+				display: block;
+				padding: .1rem .3rem 0;
+				background: transparent;
+				color: #333;
+				text-align: left;
+				font-size: .24rem;
+			}
+			.recruit > ul > li{
+				background: #fff !important;
+			}
+			.recruit ul li img{
+				width: 32px;
+			}
+
+			.tips{
+				margin-top: .4rem;
+				/*padding: 0 .03rem;*/
+				width: 1.5rem;
+				height: .5rem;
+				font-size: .2rem;
+				line-height: .5rem;
+			}
+			.leaveMes{
+				height: 100px;
+			}
+			.message{
+				width: 90%;
+			}
+			.message h3{
+				padding: .3rem 0 .2rem;
+				font-size: .3rem;
+			}
+			.input{
+				margin-bottom: .3rem;
+				padding: .1rem .2rem;
+			}
+			.input input{
+				font-size: .24rem;
+			}
+			-webkit-input-placeholder::input{
+				font-size: .24rem;
+			}
+			.submit{
+				width: 1.8rem;
+				height: .5rem;
+				line-height: .5rem;
+				font-size: .24rem;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -317,22 +492,22 @@
 									<div class="downmenu clear" style="width: 120%;margin-left: -10%;">
 										<ul class="downMiddle">
 											<li>
-												<a href="do.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
+												<a href="bighealth.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
 											</li>
 											<li>
-												<a href="http://greenbr.org.cn/" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
+												<a href="supplyChain.html" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
+												<a href="bigdata.html" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
+												<a href="informationize.html" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
+												<a href="intelligent.html" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
 											</li>
 											<li style="border-bottom: none;">
-												<a href="do-threeservice.html" style="text-decoration: none;" data-lang="do_three">咨询规划服务</a>
+												<a href="environment.html" style="text-decoration: none;" data-lang="do_three">环保服务</a>
 											</li>
 										</ul>
 									</div>
@@ -413,13 +588,13 @@
 				<img src="img/concat/banner_icon1.png" class="banner_icon1">
 				<img src="img/concat/banner_icon2.png" class="banner_icon2">
 				<img src="img/concat/banner_icon3.png" class="banner_icon3">
-				<div class="language">
+				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
 					<span>|</span>
 					<span class="en">English</span>
 					<span style="color: #00B85C;">]</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -427,13 +602,13 @@
 	<div class="position">
 		<div class="center">
 			<ul>
-				<li class="ji clear" style="margin-top: -27px;position: relative;z-index: 1;">
-					<span class="tishi fl" style="margin-top: -34px;">
+				<li class="ji1 ji clear" style="margin-top: -27px;position: relative;z-index: 2;">
+					<span class="tishi1 tishi fl" style="margin-top: -34px;">
 						<img src="img/concat/address.png" class="icon">
 						<span data-lang="com_address">公司地址</span>
 					</span>
-					<img src="img/concat/fenge.png" class="fl" style="margin-top: -43px;">
-					<span class="mes fl" data-lang="address" style="margin-top: -16px;">北京市朝阳区化工路焦奥中心4号楼14层</span>
+					<img src="img/concat/fenge.png" class="fenge1 fl" style="margin-top: -43px;">
+					<span class="mes1 mes fl" data-lang="address" style="margin-top: -16px;">北京市朝阳区化工路焦奥中心4号楼14层</span>
 				</li>
 				<li class="ou clear">
 					<span class="tishi fl">
@@ -527,7 +702,7 @@
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
 							</th>
-							<th class="bottom_title">
+							<th class="bottom_title" style="padding-right: 0;text-align: center;">
 								<a href="index.html">网站首页</a>
 							</th>
 						</tr>
@@ -536,7 +711,7 @@
 								<a href="about.html" class=" aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -544,7 +719,7 @@
 							<td>
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
-							<th style="padding-bottom: 6px;">
+							<th style="padding-bottom: 6px;padding-right: 0;text-align: center;">
 								<a href="partners.html">合作伙伴</a>
 							</th>
 						</tr>
@@ -553,7 +728,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="">供应链</a>
+								<a href="supplyChain.html">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -561,7 +736,7 @@
 							<td>
 								<a href="news.html?data=1" class="newsNav">企业资讯</a>
 							</td>
-							<th>
+							<th style="padding-right: 0;text-align: center;">
 								<a href="concat.html" class="active">联系我们</a>
 							</th>
 						</tr>
@@ -570,7 +745,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="">大数据服务</a>
+								<a href="bigdata.html">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -583,7 +758,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="">信息化服务</a>
+								<a href="informationize.html">信息化服务</a>
 							</td>
 							<td>    </td>
 							<td>
@@ -594,7 +769,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">智能化服务</a>
+								<a href="intelligent.html">智能化服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -603,7 +778,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">咨询规划服务</a>
+								<a href="environment.html">环保服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -633,7 +808,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：京ICP备18061162号-1
 	</div>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>

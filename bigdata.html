@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>大健康</title>
+	<title>大数据服务</title>
 	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
@@ -15,127 +15,216 @@
 			width: 100%;
 		}
 		.banner_swiper .banner_icon1{
+			top: 26%;
 			width: 136px;
 		}
 		.banner_swiper .banner_icon2{
-			top: 40%;
-			width: 260px;
+			top: 39%;
+			width: 306px;
 		}
 		.banner_swiper .banner_icon3{
-			width: 180px;
+			top: 55%;
+			width: 418px;
 		}
 
-		.info{
-			padding-bottom: 60px;
+		.data{
 			min-width: 1200px;
 			background: #F7FBF9;
 		}
-		.infoCon{
+		.data ul{
 			position: relative;
-			z-index: 1;
-			margin: 0 auto;
-			width: 70%;
-			text-align: center;
+			z-index: 0;
+			margin: -74px auto 0;
+			/*width: 65%;*/
 		}
-		.infoCon h2{
-			margin: -54px 0 15px;
+		.data li{
+			padding: 60px 0;
+		}
+		.wrap{
+			margin: 0 auto;
+			width: 65%;
+			align-items: center;
+		}
+		.dataDes{
+			width: 50%;
+		}
+		.qinayan .dataDes{
+			padding-right: 30px;
+			text-align: left;
+		}
+		.yingyong .dataDes{
+			padding-left: 30px;
+			text-align: right;
+		}
+		.dataDes h3{
+			margin-bottom: 20px;
 			font-size: 20px;
 			color: #003E3A;
 		}
-		.infoCon p{
-			font-size: 14px;
-			color: #64908D;
-			letter-spacing: 1.5px;
-			line-height: 22px;
-		}
-
-		.healthList{
-			min-width: 1200px;
-			background: #F7FBF9;
-		}
-		.healthList li{
-			align-items: center;
-		}
-		.healthListDes{
-			padding: 80px;
-			width: 50%;
-		}
-		.healthListDes h3{
+		.dataDes p{
 			margin-bottom: 20px;
-			font-size: 16px;
-			color: #272727;
-			letter-spacing: 1px;
-		}
-		.ji{
-			text-align: right;
-		}
-		.ou{
-			text-align: left;
-		}
-		.healthListDes p{
 			font-size: 14px;
-			color: #6C6C6C;
+			color: #658684;
+			line-height: 22px;
 			text-align: justify;
 		}
-		.healthListDes p{
+		.dataDes span{
+			display: block;
+			width: 126px;
+			height: 34px;
+			font-size: 14px;
+			color: #fff;
+			text-align: center;
+			border-radius: 5px;
+			line-height: 32px;
+			background: #17864F;
+		}
+		.data ul .img{
+			width: 50%;
+		}
+		.qinayan .img{
+			padding-left: 30px;
+			text-align: right;
+		}
+		.yingyong .img{
+			padding-right: 30px;
+			text-align: left;
+			flex-wrap: wrap;
+		}
+		.qinayan .img img{
+			width: 100%;
+		}
+
+		.yingyong{
+			background: #DFECE6;
+		}
+		.yyIcon{
+			position: relative;
+			width: 22%;
+			text-align: center;
+		}
+		.yyIcon .iconList img{
+			width: 80%;
+		}
+		.des{
+			position: absolute;
+			left: 5px;
+			display: none;
+			/*padding: 8px;*/
+			width: 240px;
+			/*background: url(img/do/tips.png) no-repeat center/cover;*/
+			/*box-shadow: 0px 2px 24px 1px rgba(183, 209, 197, 0.5);*/
+		}
+		.des img{
+			width: 100%;	
+			/*box-shadow: 0px 2px 15px 1px rgba(183,209,197,0.5);*/
+		}
+		.yyIcon p{
+			position: absolute;
+			top: -4px;
+			left: 0;
+			padding: 12px;
+			/*z-index: 2;*/
+			/*width: 240px;*/
+			font-size: 11px;
+			color: #909090;
+			text-align: justify;
+			
+			
+		}
+		.iconList{
 			margin-bottom: 20px;
 		}
-		.healthListImg{
-			width: 50%;
+		.iconList i{
+			display: block;
+			margin-top: 8px;
+			font-size: 14px;
+			color: #003E3A;
+			text-align: center;
+		}
+		.anli .dataDes{
+			width: 65%;
+		}
+		.anli .img{
+			width: 35%;
+		}
+		.anli img{
+			padding-left: 30px;
+			width: 100%;
 		}
 
 		@media screen and (max-width: 760px){
 			.banner_swiper .banner_icon1{
+				top: 22%;
 				width: 65px;
 			}
 			.banner_swiper .banner_icon2{
-				top: 42%;
-				width: 150px;
+				width: 180px;
 			}
 			.banner_swiper .banner_icon3{
-				top: 64%;
-				width: 126px;
+				top: 63%;
+				width: 210px;
 			}
-
-			.info{
-				padding-bottom: 15px;
+			.data{
 				min-width: 100%;
 			}
-			.infoCon{
+			.data ul{
+				margin-top: -15px;
+			}
+			.data li{
+				padding: 20px 0;
+			}
+			.data .yingyong{
+				padding-bottom: 45px;
+			}
+			.wrap{
 				width: 90%;
 			}
-			.infoCon h2{
-				margin: -10px auto 10px;
-				font-size: .29rem;
+			.dataDes h3{
+				margin-bottom: 8px;
+    			font-size: .28rem;
 			}
-			.infoCon p{
+			.dataDes p{
+				margin-bottom: 8px;
+			    font-size: .24rem;
+			    line-height: .34rem;
+			}
+			.qinayan .dataDes{
+				padding-right: 6px;
+			}
+			.qinayan .img{
+				padding-left: 6px;
+			}
+			.yingyong .dataDes{
+				padding-left: 6px;
+			}
+			.yingyong .img{
+				padding-right: 6px;
+			}
+			.dataDes span{
+				width: 80px;
+				height: 24px;
+				line-height: 24px;
 				font-size: .24rem;
-				line-height: .34rem;
 			}
-			.healthList{
-				min-width: 100%;
+			.yyIcon{
+				width: 25%;
 			}
-			.healthList li{
-				padding: 15px 0;
-				/*border-bottom: 1px solid #ccc;*/
+			.des{
+				display: none !important;
 			}
-			.healthList li:nth-child(2n){
-				background: #DFECE6;
+			.iconList i{
+				margin-top: 4px;
+				font-size: .16rem;
 			}
-			.healthListDes{
-				padding: 8px;
-				width: 65%;
-			}
-			.healthListDes h3{
-				margin-bottom: 6px;
-				font-size: .24rem;
-			}
-			.healthListDes p{
-				margin-bottom: 4px;
+			/*.yyIcon p{
 				font-size: .18rem;
+			}*/
+			.anli img{
+				padding-left: 12px;
 			}
-			.healthListImg{
-				width: 35%;
+			.anli .dataDes{
+				width: 50%;
 			}
 		}
 	</style>
@@ -291,9 +380,9 @@
 				<div class="swiper-container">
 					<!-- <img src="img/index/banner.png"> -->
 				</div>
-				<img src="img/do/bighealth_icon1.png" class="banner_icon1">
-				<img src="img/do/bighealth_icon2.png" class="banner_icon2">
-				<img src="img/do/bighealth_icon3.png" class="banner_icon3">
+				<img src="img/do/bigdata_icon1.png" class="banner_icon1">
+				<img src="img/do/bigdata_icon2.png" class="banner_icon2">
+				<img src="img/do/bigdata_icon3.png" class="banner_icon3">
 				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
@@ -305,40 +394,168 @@
 		</div>
 	</div>
 
-	<div class="info">
-		<div class="center">
-			<div class="infoCon">
-				<!-- <h2>大健康</h2>
-				<p>大健康是根据时代发展、社会需求与疾病谱的改变，提出的一种全局的理念。它围绕着人的衣食住行以及人的生老病死，关注各类影响健康的危险因素和误区，提倡自我健康管理</p> -->
-			</div>
-		</div>
-	</div>
-
-	<div class="healthList">
+	<div class="data">
 		<div class="center">
 			<ul>
-				<!-- <li class="ji flex">
-					<div class="healthListDes">
-						<h3>远程医疗服务平台</h3>
-						<p>盈实科技（北京）有限源，通过</p>
-					</div>
-					<img src="img/do/bighealth.png" class="healthListImg">
-				</li>
-				<li class="ou flex">
-					<img src="img/do/bighealth.png" class="healthListImg">
-					<div class="healthListDes">
-						<h3>远程医疗服务平台</h3>
-						<p>盈实科技（北京）有限公造式注入新的能量。</p>
-						<p> 盈实科技为MDM+APP+Mobile</p>
+				<li class="qinayan">
+					<div class="wrap flex">
+						<div class="dataDes">
+							<h3>大数据服务—前沿技术</h3>
+							<p>大数据服务通过底层可伸缩的大数据平台和上层各种大数据应用，支撑机构或个人对海量、异构、快速变化数据采集、传输、存储、处理（包括计算、分析、可视化等）、交换、销毁等覆盖数据生命周期相关活动的各种数据服务。</p>
+							<span>前沿技术</span>
+						</div>
+						<div class="img">
+							<img src="img/do/bigdata1.png" alt="">
+						</div>
 					</div>
 				</li>
-				<li class="ji flex">
-					<div class="healthListDes">
-						<h3>远程医疗服务平台</h3>
-						<p>盈实康养云链项目</p>
+				<li class="yingyong">
+					<div class="wrap flex">
+						<div class="img flex">
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong1.png" alt="">
+									<i>制造业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>利用工业大数据提升制造业水平，包括产品故障诊断与预测、分析工艺流程、改进生产工艺，优化生产过程能耗、工业供应链分析与优化、生产计划与排程。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong2.png" alt="">
+									<i>金属行业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>大数据在高频交易、社交情绪分析和信贷风险分析三大金融创新领域发挥重大作用。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong3.png" alt="">
+									<i>汽车行业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>利用大数据和物联网技术的无人驾驶汽车，在不远的未来将走入我们的日常生活。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong4.png" alt="">
+									<i>互联网行业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>借助于大数据技术，可以分析客户行为，进行商品推荐和针对性广告投放。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong5.png" alt="">
+									<i>电信行业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>利用大数据技术实现客户离网分析，及时掌握客户离网倾向，出台客户挽留措施。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong6.png" alt="">
+									<i>能源行业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>随着智能电网的发展，电力公司可以掌握海量的用户用电信息，利用大数据技术分析用户用电模式，可以改进电网运行，合理设计电力需求响应系统，确保电网运行安全。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong8.png" alt="">
+									<i>物流行业</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>利用大数据优化物流网络，提高物流效率，降低物流成本。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong9.png" alt="">
+									<i>城市管理</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>可以利用大数据实现智能交通、环保监测、城市规划和智能安防。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong10.png" alt="">
+									<i>生物医学</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>大数据可以帮助我们实现流行病预测、智慧医疗、健康管理，同时还可以帮助我们解读DNA,了解更多的生命奥秘。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong11.png" alt="">
+									<i>体育娱乐</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>大数据可以帮助我们训练球队，决定投拍哪种题财的影视作品，以及预测比赛结果。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong12.png" alt="">
+									<i>安全领域</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>政府可以利用大数据技术构建起强大的国家安全保障体系，企业可以利用大数据抵御网络攻击，警察可以借助大数据来预防犯罪。</p>
+								</div>
+							</div>
+							<div class="yyIcon">
+								<div class="iconList">
+									<img src="img/do/yingyong7.png" alt="">
+									<i>个人生活</i>
+								</div>
+								<div class="des">
+									<img src="img/do/tips.png" alt="">
+									<p>应用于个人生活，利用与每个人相关联的“个人大数据”，分析个人生活行为习惯，为其提供更加周到的个性化服务。</p>
+								</div>
+							</div>
+						</div>
+						<div class="dataDes">
+							<h3>大数据服务—应用场景</h3>
+							<p>大数据服务主要是帮助企业加速向传统产业渗透，驱动生产方式和管理模式变革，推动制造业向网络化、数字化和智能化方向发展。电信、金融、交通等行业利用已积累的丰富数据资源，积极探索客户细分、风险防控、信用评价等应用，加快服务优化、业务创新和产业升级步伐</p>
+							<div style="position: relative;">
+								<span style="position: absolute;right: 0;">应用场景</span>
+							</div>
+							
+						</div>
 					</div>
-					<img src="img/do/bighealth.png" class="healthListImg">
-				</li> -->
+				</li>
+				<li class="anli">
+					<div class="wrap flex">
+						<!-- <div class="dataDes" style="word-break: break-all">
+							<h3>大数据服务—案例介绍</h3>
+                            <p>在第二届“一带一路”国际合作高峰论坛绿色之路分论坛上，“一带一路”生态环保大数据服务平台（以下简称大数据平台）门户网站正式发布。</p>
+                            <p>大数据平台旨在建设一个先进、开放、透明、共建、共享、安全的生态环境信息交流旗舰式平台，并为“一带一路”共建国家提供环境数据支持，共享生态环保理念、法律法规与标准、环境政策和治理措施等信息，服务绿色“一带一路”建设和联合国2030年可持续发展议程的落实。</p>
+                            <p>因此，“共商、共建、共享”是大数据平台建设的核心目标。大数据平台需要各方共建，对各方开放、相互包容，为各方互学互鉴提供技术支持，最终实现信息共享、数据共享、知识共享和惠益共享。</p>
+						</div>
+						<div class="img">
+							<img src="img/do/bigdata3.png" alt="">
+						</div> -->
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -370,7 +587,7 @@
 								<a href="about.html" class="aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="bighealth.html" class="active">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -404,7 +621,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="bigdata.html">大数据服务</a>
+								<a href="bigdata.html" class="active">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -479,64 +696,34 @@
 	<script>
 		jQuery.support.cors = true;
 
-		//数据对接
+		//应用场景小弹框
+		var h=$(".iconList").height()+25;
+		$(".yyIcon .des").each(function(i,v){
+			$(v).css("bottom",h);
+		})
+
+		$(".yyIcon .iconList").mouseover(function(){
+			$(this).siblings('.des').show();
+			// $(this).siblings('.des').height()
+		})
+		$(".yyIcon .iconList").mouseout(function(){
+			$(this).siblings('.des').hide();
+		})
+		
 		$.ajax({
 			type:"GET",
-			url: "http://39.100.241.51:81/api/bussiness/bussinessByid",
+			url: "http://39.100.241.51:81/api/bussiness/bigdata",
 			data:"",
 			dataType:'JSON',
 			success:function(n){
-				var html="";
+				var html1="";
 				var banner=n.data;
-				html+='<img src="http://39.100.241.51:81/'+banner[0].byid_pictures+'">';
-				$(".swiper-container").prepend(html);
-			}
-		})
-
-		$.ajax({
-			type:"GET",
-			url: "http://39.100.241.51:81/api/bussiness/bussinessByid",
-			data:"",
-			dataType:'JSON',
-			success:function(n){
-				var html="";
-				var health=n.data;
-				html+='<h2>'+health[0].name+'</h2><p>'+health[0].businessBytitle+'</p>'
-				$(".infoCon").prepend(html);
-			}
-		})
-
-		$.ajax({
-			type:"GET",
-			url: "http://39.100.241.51:81/api/bussiness/bussinessByid",
-			data:"",
-			dataType:'JSON',
-			success:function(n){
-				var html="";
-				var list=n.data;
-				for(var i=0;i<list.length;i++){
-					if(list[i].byid_titles==null){
-						console.log(i)
-						list[i].byid_titles="";
-					}
-					if(i%2==0){
-						// console.log(111)
-						html+='<li class="ji flex"><div class="healthListDes"><h3>'+list[i].buid_name+'</h3><p>'+list[i].byid_title+'</p><p> '+list[i].byid_titles+'</p></div><img src="http://39.100.241.51:81/'+list[i].picture+'" class="healthListImg"></li>'
-					}else{
-						// console.log(222)
-						html+='<li class="ou flex"><img src="http://39.100.241.51:81/'+list[i].picture+'"class="healthListImg"><div class="healthListDes"><h3>'+list[i].buid_name+'</h3><p>'+list[i].byid_title+'</p><p>'+list[i].byid_titles+'</p></div></li>'
-					}
-				}
-				$(".healthList ul").prepend(html);
-
-				//文字描述如果较少标题和描述居中
-				$(".healthListDes p").each(function(i,v){
-					var l=$(v).html().length;
-					if(l<24){
-						$(this).siblings("h3").css("text-align","center");
-						$(this).css("text-align","center");
-					}
-				})
+				// console.log(banner)
+				html1+='<img src="http://39.100.241.51:81/'+banner[0].byid_pictures+'">';
+				$(".swiper-container").prepend(html1);
+				var html2="";
+				html2+='<div class="dataDes" style="word-break: break-all"><h3>'+banner[0].name+'</h3><p>'+banner[0].title+'</p><p>'+banner[0].title1+'</p><p>'+banner[0].title2+'</p></div><div class="img"><img src="http://39.100.241.51:81/'+banner[0].picture+'" alt=""></div>';
+				$(".anli .wrap").prepend(html2);
 			}
 		})
 	</script>

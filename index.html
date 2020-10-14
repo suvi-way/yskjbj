@@ -10,6 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/resize.js"></script>
+	<!-- <script src="js/jquery.i18n.properties.js"></script> -->
+	<script src="js/echarts.min.js"></script>
+	<script src="js/china.js"></script>
 </head>
 <body>
 	<div class="banner">
@@ -69,22 +73,22 @@
 									<div class="downmenu clear" style="width: 120%;margin-left: -10%;">
 										<ul class="downMiddle">
 											<li>
-												<a href="do.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
+												<a href="bighealth.html" style="text-decoration: none;" data-lang="do_health">大健康</a>
 											</li>
 											<li>
-												<a href="http://greenbr.org.cn/" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
+												<a href="supplyChain.html" style="text-decoration: none;" data-lang="do_gyl" target="_blank">供应链</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
+												<a href="bigdata.html" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
+												<a href="informationize.html" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
+												<a href="intelligent.html" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
 											</li>
 											<li style="border-bottom: none;">
-												<a href="do-threeservice.html" style="text-decoration: none;" data-lang="do_three">咨询规划服务</a>
+												<a href="environment.html" style="text-decoration: none;" data-lang="do_three">环保服务</a>
 											</li>
 										</ul>
 									</div>
@@ -184,13 +188,13 @@
 				<img src="img/index/banner_icon1.png" class="banner_icon1">
 				<img src="img/index/banner_icon2.png" class="banner_icon2">
 				<img src="img/index/banner_icon3.png" class="banner_icon3">
-				<div class="language">
+				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
-					<span class="ch now_lan">中文</span>
+					<span class="ch now_lan" onclick="switchLang()">中文</span>
 					<span>|</span>
-					<span class="en">English</span>
+					<span class="en" onclick="switchLang()">English</span>
 					<span style="color: #00B85C;">]</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -266,7 +270,7 @@
 				<li class="second hover">
 					<div class="origin">
 						<img src="img/index/work_icon6.png">
-						<h4>咨询规划服务</h4>
+						<h4>环保服务</h4>
 						<p>环保咨询、供应链咨询等</p>
 					</div>
 					<div class="curson">
@@ -348,6 +352,7 @@
 				<h2>水环境质量地图展示</h2>
 				<img src="img/index/icon_green.png">
 			</div>
+			<div class="map" id="map" style="width: 100%;height: 400px;"></div>
 		</div>
 	</div>
 
@@ -370,7 +375,7 @@
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
 							</th>
-							<th class="bottom_title">
+							<th class="bottom_title" style="padding-right: 0;text-align: center;">
 								<a href="index.htmls" class="active">网站首页</a>
 							</th>
 						</tr>
@@ -379,7 +384,7 @@
 								<a href="about.html" class=" aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -387,7 +392,7 @@
 							<td>
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
-							<th style="padding-bottom: 6px;">
+							<th style="padding-bottom: 6px;padding-right: 0;text-align: center;">
 								<a href="partners.html">合作伙伴</a>
 							</th>
 						</tr>
@@ -396,7 +401,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="">供应链</a>
+								<a href="supplyChain.html">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -404,7 +409,7 @@
 							<td>
 								<a href="news.html?data=1" class="newsNav">企业资讯</a>
 							</td>
-							<th>
+							<th style="padding-right: 0;text-align: center;">
 								<a href="concat.html">联系我们</a>
 							</th>
 						</tr>
@@ -413,7 +418,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="">大数据服务</a>
+								<a href="bigdata.html">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -426,7 +431,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="">信息化服务</a>
+								<a href="informationize.html">信息化服务</a>
 							</td>
 							<td>
 								<a href="program.html">环保咨询</a>
@@ -439,7 +444,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">智能化服务</a>
+								<a href="intelligent.html">智能化服务</a>
 							</td>
 							<td>
 								<a href="program.html">现代供应链咨询</a>
@@ -450,7 +455,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">咨询规划服务</a>
+								<a href="environment.html">环保服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -480,12 +485,11 @@
 		</div>
 	</div>
 	<div class="copy">
-		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：京ICP备18061162号-1
 	</div>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/public.js"></script>
-	<!-- <script src="js/index.js"></script> -->
 	<script>
 		jQuery.support.cors = true;
 
@@ -515,7 +519,14 @@
 		  pagination: {
 		    el: '.swiper-pagination',
 		    clickable :true
-		  }
+		  },
+		  observer:true,//修改swiper自己或子元素时，自动初始化swiper 
+		  observeParents:true,//修改swiper的父元素时，自动初始化swiper
+		  // autoplay: {
+    //   	    delay:5000,
+    //   	    disableOnInteraction:false
+    //       },
+          loop: true,
 		});
 
 		//公司业务
@@ -529,14 +540,17 @@
 				var html='';
 				var business=n.data;
 				for(var i=0;i<business.length;i++){
+					if(business[i].titles==null){
+						business[i].titles="";
+					}
 					if(i==0){
-						html+='<li class="first hover"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
+						html+='<li class="first hover" data-href="'+business[i].href+'"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
 					}else if(i<3 && i>0){
-						html+='<li class="first"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
+						html+='<li class="first" data-href="'+business[i].href+'"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
 					}else if(i>=3 && i<=4){
-						html+='<li class="second"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
+						html+='<li class="second" data-href="'+business[i].href+'"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
 					}else{
-						html+='<li class="second hover"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
+						html+='<li class="second hover" data-href="'+business[i].href+'"><div class="origin"><img src="http://39.100.241.51:81/'+business[i].picture+'"><h4>'+business[i].name+'</h4><p>'+business[i].title+'</p><p>'+business[i].titles+'</p></div></li>';
 					}
 					
 				}
@@ -560,6 +574,13 @@
 						$(this).addClass("hover").siblings(".second").removeClass("hover");
 					}
 				});
+
+				//点击跳转到对应页面
+				$(".work_con li").each(function(i,v){
+					$(v).click(function(){
+						window.location.href=$(this).attr("data-href");
+					})
+				})
 			}
 		})
 		
@@ -587,6 +608,10 @@
 		}	
 
 		//项目案例
+		//点击进入项目案例
+		function goProgram(){
+			window.location.href="program.html";
+		}	
 		$.ajax({
 			type:"GET",
 			url: "http://39.100.241.51:81/api/home/cases",
@@ -596,7 +621,7 @@
 				var html='';
 				var cases=n.data;
 				for(var i=0;i<cases.length;i++){
-					html+='<div class="program_con"><div class="program_title"><img src="http://39.100.241.51:81/'+cases[i].picture+'"><h3>'+cases[i].name+'</h3>					</div><p class="flex">'+cases[i].title+'</p></div>';
+					html+='<div class="program_con" onclick="goProgram()"><div class="program_title"><img src="http://39.100.241.51:81/'+cases[i].picture+'"><h3>'+cases[i].name+'</h3>					</div><p class="flex">'+cases[i].title+'</p></div>';
 				}
 				$(".program_main").html(html);
 				// 项目案例鼠标经过
@@ -607,7 +632,7 @@
 					$(v).mouseout(function(){
 						$(this).find("img").attr("src","http://39.100.241.51:81/"+cases[i].picture)
 					})
-				})		
+				})	
 			}
 		})
 
@@ -621,7 +646,7 @@
 				var html='';
 				var news=n.data;
 				for(var i=0;i<news.length;i++){
-					html+='<li><span><img src="http://39.100.241.51:81/'+news[i].pictures+'"></span><div class="news_details"><h3>'+news[i].title+'</h3><p>'+news[i].outline+'</p><a class="more" onclick="goNewsDetails(this)" data-id="'+news[i].newsid+'">了解更多</a></div></li>';
+					html+='<li onclick="goNewsDetails(this)" data-id="'+news[i].newsid+'"><span><img src="http://39.100.241.51:81/'+news[i].pictures+'"></span><div class="news_details"><h3>'+news[i].title+'</h3><p>'+news[i].outline+'</p><a class="more">了解更多</a></div></li>';
 				}
 				$(".news ul").prepend(html);
 			}
@@ -631,6 +656,127 @@
 			var nid=$(n).attr("data-id");
 			window.location.href="newsDetails.html?param=5&id="+nid;
 		}	
+
+
+		$(".navbar-toggle").click(function(){
+			console.log(999)
+		})
+
+		//地图
+		var myChart = echarts.init(document.getElementById('map'));
+     	
+
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/home/quality",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var aqi=n.data;
+				var result=[];
+				for(var i=0;i<aqi.length;i++){
+					var json={"name":aqi[i].name,"value":aqi[i].aqi}
+					result.push(json)
+				}
+				// console.log(result)
+				option = {
+		     	// 	title : {
+				    //     text: '2020年第一季度"一带一路"沿线18个重点省份外贸依存度',
+				    //     bottom: 0,
+				    //     textStyle:{
+				    //     	color:"#fff",
+				    //     },
+				    //     // subtext: '2020.01.15',
+				    //     left: 'center'
+				    // },
+				    legend: {
+				    	top: 0
+				    },
+				    tooltip : {
+				        trigger: 'item',
+				        formatter: function (val) {
+				       		// console.log(val.seriesName)
+					        if(val.data.value){
+					        	return val.seriesName+'<br>'+val.data.name + ': ' + val.data.value 
+					        }
+		                
+		             	},
+		             	textStyle:{
+				           fontSize: 14
+				        },
+				    },
+				    visualMap: {
+				        min: 1,
+				        max: 96,
+				        left: '160',
+				        bottom: '25vh',
+				        text:['高','低'],           // 文本，默认为数值文本
+				        inRange: {
+		                // 图元的颜色
+			                color: ['#FBCD88','#FBF5C5','#CFE7B5','#6ABF48', '#4E7036']
+			            },
+				        calculable : true,
+				        textStyle:{
+				           color: '#fff'
+				        },
+				    },
+				    series : [
+				        {
+				            name: 'AQI',
+				            type: 'map',
+				            mapType: 'china',
+				            zoom: 1.1,
+				            roam: true,//是否开启平游或缩放
+				            top: 15,
+				            showLegendSymbol: false,
+				            label: {
+				                normal: {
+				                    show: true,
+				                    textStyle : {
+			                            color : '#444',
+			                            fontSize: 12
+			                        }
+				                },
+				                emphasis: {
+				                    show: true
+				                }
+
+				            },
+				             // 地图区域的多边形 图形样式
+			                itemStyle: {
+			                 normal:{
+			                   // 地图区域的颜色 如果设置了visualMap, 这个属性将不起作用
+			                    // areaColor: 'rgba(24,65,91,1)', 
+			                    // 描边线宽 为 0 时无描边
+			                    borderWidth: 1.5, 
+			                    // 图形的描边颜色 支持的颜色格式同 color
+			                     borderColor : '#9DDCEB',
+			                    // 描边类型，默认为实线，支持 'solid', 'dashed', 'dotted'
+			                    borderType: 'solid',
+			                    // shadowColor : '#9DDCEB',
+			                    // shadowBlur : 20
+			                 },
+			                  // 高亮状态
+			                emphasis: {
+			                   // 文本标签
+			                    label: {
+			                      // 是否显示标签
+			                      show: true, 
+			                      // 文字的颜色 如果设置为 'auto'，则为视觉映射得到的颜色，如系列色
+			                      color: '#fff'
+			                    },
+			                    // 图形样式
+			                    areaColor: '#5475f5' 
+			                  },
+			                },
+				            data:result
+				        }
+				    ]
+				};
+				myChart.setOption(option);
+			}
+		})
 	</script>
+	<!-- <script src="js/index.js"></script> -->
 </body>
 </html>

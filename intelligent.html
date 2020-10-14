@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>项目案例</title>
+	<title>智能化服务</title>
 	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
@@ -14,107 +14,180 @@
 		.banner_swiper img{
 			width: 100%;
 		}
+		.banner_swiper .banner_icon1{
+			top: 27%;
+			width: 136px;
+		}
 		.banner_swiper .banner_icon2{
-			width: 346px;
+			top: 40%;
+			width: 296px;
 		}
 		.banner_swiper .banner_icon3{
-			width: 75px;
+			top: 56%;
+			width: 166px;
 		}
-		
-		.program{
-			padding-bottom: 50px;
-			/*background: red;*/
+
+		.intelligent{
 			min-width: 1200px;
 			background: #F7FBF9;
 		}
-		.program h2{
+		.intelligent ul{
 			position: relative;
-			z-index: 1;
-			margin: -54px 0 0;
-			font-size:20px;
-			color: #003E3A;
-			text-align: center;
+			z-index: 0;
+			margin-top: -74px;
 		}
-		.program .line{
-		    margin: 38px auto;
-		    width: 60%;
-		    height: 1px;
-		    background: #D8D8D8;
+		.intelligent li:nth-child(2n+1){
+			background: #F7FBF9;
 		}
-		.program ul{
+		.intelligent li:nth-child(2n){
+			background: #DFECE6;
+		}
+		.intelligentList{
 			margin: 0 auto;
-			width: 60%;
-		}
-		.program ul li{
-			margin-bottom: 38px;
+			padding: 60px 0;
+			width: 65%;
 			align-items: center;
 		}
-		.program ul li .border{
-			width: 3px;
-			height: 120px;
-			background: #017F40;
-			border-radius: 3px;
+		.intelligentList h3{
+			margin-bottom: 20px;
+		    font-size: 20px;
+		    color: #003E3A; 
 		}
-		.program ul h3{
-			font-size: 15px;
-			color: #003E3A;
+		.intelligentList p{
+			/*margin-bottom: 20px;*/
+		    font-size: 14px;
+		    color: #658684;
+		    line-height: 22px;
+		    text-align: justify;
 		}
-		.program ul p{
-			margin-top: 18px;
+		.intelligentList>div{
+			width: 60%;
+		}
+		.left{
+			margin-right: 30px;
+			text-align: left;
+		}
+		.right{
+			margin-left: 30px;
+			text-align: right;
+		}
+		.intelligentList img{
+			width: 40%;
+		}
+
+		.case{
+			padding: 60px 0;
+			min-width: 1200px;
+			background: #F7FBF9;
+		}
+		.case ul{
+			margin: 0 auto;
+			width: 65%;
+		}
+		.caseCon{
+			align-items: center;
+		}
+		.case h3{
+			margin-bottom: 15px;
+			font-size: 18px;
+			color: #658684;
+		}
+		.ji h3{
+			text-align: left;
+		}
+		.ou h3{
+			text-align: right;
+		}
+		.case li{
+			margin-bottom: 30px;
+			padding: 20px 38px 38px 38px;
+			background: #fff;
+			box-shadow: 0px 2px 24px 1px rgba(183, 209, 197, 0.5);
+			border-radius: 10px;
+		}
+		.case li:last-child{
+			margin-bottom: 0;
+		}
+		.leftCon{
+			margin-right: 15px;
+		}
+		.rightCon{
+			margin-left: 15px;
+		}
+		.caseCon img{
+			width: 47%;
+		}
+		.caseCon p{
+			width: 53%;
 			font-size: 13px;
-			color: #017F40;
-			opacity: 0.5;
-		}
-		.program ul img{
-			width: 36%;
-		}
-		.program_con{
-			width: 63%;
+			color: #658684;
+			text-align: justify;
+			line-height: 20px;
 		}
 
 		@media screen and (max-width: 760px){
+			.banner_swiper .banner_icon1{
+				top: 24%;
+				width: 65px;
+			}
 			.banner_swiper .banner_icon2{
-				width: 160px;
+				top: 42%;
+				width: 170px;
 			}
 			.banner_swiper .banner_icon3{
-				top: 64%;
-				width: 50px;
+				top: 65%;
+				width: 90px;
 			}
 
-			.program{
-				padding-bottom: 10px;
+			.intelligent{
 				min-width: 100%;
 			}
-			.program h2{
-				margin-top: -10px;
+			.intelligent ul{
+				margin-top: -15px;
+			}
+			.intelligentList{
+				padding: 20px 0;
+    			width: 90%;
+			}
+			.intelligentList h3{
+				margin-bottom: 8px;
+    			font-size: .28rem;
+			}
+			.intelligentList p{
+				font-size: .24rem;
+   				line-height: .34rem;
+			}
+			.left{
+				margin-right: 6px;
+			}
+			.right{
+				margin-left: 6px;
+			}
+
+			.case{
+				padding: 30px 0;
+				min-width: 100%;
+			}
+			.case ul{
+				width: 96%;
+			}
+			.case li{
+				margin-bottom: 15px;
+				padding: 12px 12px 12px 12px;
+			}
+			.case h3{
+				margin-bottom: 8px;
 				font-size: .32rem;
 			}
-			.program .line{
-				margin: 16px auto 24px;
-				width: 85%;
-			}
-			.program ul{
-				width: 85%;
-			}
-			.program ul li{
-				margin-bottom: 25px;
-			}
-			.program ul h3{
-				font-size: .28rem;
-			}
-			.program ul p{
-				margin-top: 6px;
+			.caseCon p{
 				font-size: .24rem;
 				line-height: .3rem;
 			}
-			.program_con1{
-				margin: 0 10px 0 8px !important;
+			.rightCon{
+				margin-left: 6px;
 			}
-			.program_con2{
-				margin: 0 8px 0 10px !important;
-			}
-			.program ul li:nth-child(2n)>img{
-				margin-left: 0 !important;
+			.leftCon{
+				margin-right: 6px;
 			}
 		}
 	</style>
@@ -168,7 +241,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="navcon downtitle">
+								<li class="navcon downtitle curson">
 									<!-- <img src="img/do-icon.png" class="boforeIcon"> -->
 									<a href="do.html" data-lang="do_header">
 									公司业务
@@ -202,7 +275,7 @@
 									<a href="partners.html" data-lang="partner_header">合作伙伴</a>
 									<i class="navIcon"></i>
 								</li>
-								<li class="navcon downtitle curson">
+								<li class="navcon downtitle">
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
@@ -268,11 +341,11 @@
 			</div>
 			<div class="banner_swiper">
 				<div class="swiper-container">
-					<img src="img/index/banner.png">
+					<!-- <img src="img/index/banner.png"> -->
 				</div>
-				<img src="img/program/banner_icon1.png" class="banner_icon1">
-				<img src="img/program/banner_icon2.png" class="banner_icon2">
-				<img src="img/program/banner_icon3.png" class="banner_icon3">
+				<img src="img/do/intelligent_icon1.png" class="banner_icon1">
+				<img src="img/do/intelligent_icon2.png" class="banner_icon2">
+				<img src="img/do/intelligent_icon3.png" class="banner_icon3">
 				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
@@ -284,41 +357,53 @@
 		</div>
 	</div>
 
-	<div class="program">
+	<div class="intelligent">
 		<div class="center">
-			<div class="program_title">
-				<h2>项目案例</h2>
-				<p class="line"></p>
-			</div>
 			<ul>
-				<!-- <li class="flex">
-					<img src="img/program/program1.png">
-					<div class="program_con" style="margin: 0 32px 0 18px;">
-						<h3 style="text-align: right;">能源节能</h3>
-						<p>为某航站楼S3006机房两台空调机组进行节能改造及研究；试点改造机组自身节能率达60%；与对照机房相比，节能率达38%；综合节能率36.3%-59.61%，投资回收期3-4年。</p>
+				<!-- <li>
+					<div class="intelligentList flex">
+						<div class="left">
+							<h3>智慧楼宇</h3>
+							<p>采用计算机控制技术，管理软件和节能系统程序，使建筑物机电或建筑群内的设备有条不紊、综合协调、科学地运行，从而达到有效地保证建筑物内有舒适的工作环境、实现节能、节省维护管理工作量和运行费用的目的。</p>
+						</div>
+						<img src="img/do/intelligent1.png" class="right">
 					</div>
-					<div class="border"></div>
 				</li>
-				<li class="flex" style="background: rgba(1,127,64,0.06);">
-					<div class="border"></div>
-					<div class="program_con" style="margin-left: 32px;">
-						<h3>智能办公</h3>
-						<p>根据需求个性化定制智能系统方案，实现办公室的高效管理，营造舒适的办公环境，同时节能减耗，降低维护成本。</p>
+				<li>
+					<div class="intelligentList flex">
+						<img src="img/do/intelligent2.png" class="left">
+						<div class="right">
+							<h3>数字园区</h3>
+							<p>以一种更高效集约的方法，通过三维模型制作、软件、服务、物联网技术来提高园区管理效率、提升园区产业服务水平和居民生活服务水平，以提高服务的明确性、效率、灵活性和响应速度，做到随需服务，建立自主创新服务体系的新型园区，实现园区经济可持续发展和价值链提升的目标。</p>
+							<p>随着我国社会、经济的快速发展，园区向创新化、科技化、智慧化转变的改革势在必行，利用各种智能化、信息化应用帮助园区实现产业结构和管理模式的转变，提升园区企业竞争力，促进以园区为核心的产业聚合，为园区及园区企业打造经济与品牌双效益成为应对新一代园区竞争力的有力武器。</p>
+						</div>
 					</div>
-					<img src="img/program/program2.png" style="margin-left: 18px;">
-				</li>
-				<li class="flex">
-					<img src="img/program/program3.png">
-					<div class="program_con" style="margin: 0 32px 0 18px;">
-						<h3 style="text-align: right;">系统集成</h3>
-						<p>仙桃国际大数据谷位于重庆市渝北区，做为西部重要的科技技术产业中心园区， 围绕中国大数据产业生态谷的总体目标，坚持技术创新、模式创新、业态创新、协同创新，集中优势资源着力发展大数据产业，形成自主可控的大数据产业链、价值链和生态系统。园区整体规划面积2平方公里，总建设规模约175万平方米，预计静态建设投资约127亿元。</p>
-					</div>
-					<div class="border"></div>
 				</li> -->
 			</ul>
 		</div>
 	</div>
-	
+
+	<div class="case">
+		<div class="center">
+			<ul>
+				<!-- <li class="ji">
+					<h3>案例一</h3>
+					<div class="caseCon flex">
+						<img src="img/do/intelligent3.png" alt="" class="leftCon">
+						<p class="rightCon">仙桃国际大数据谷位于重庆市渝北区，做为西部重要的科技技术产业中心园区， 围绕中国大数据产业生态谷的总体目标，坚持技术创新、模式创新、业态创新、协同创新，集中优势资源着力发展大数据产业，形成自主可控的大数据产业链、价值链和生态系统。园区整体规划面积2平方公里，总建设规模约175万平方米，预计静态建设投资约127亿元。</p>
+					</div>
+				</li>
+				<li class="ou">
+					<h3>案例二</h3>
+					<div class="caseCon flex">
+						<p class="leftCon">为某航站楼S3006机房两台空调机组进行节能改造及研究。 试点改造机组自身节能率达60%; 与对照机房相比，节能率达38%； 综合节能率36.3%-59.61%，投资回收期3-4年。</p>
+						<img src="img/do/intelligent4.png" class="rightCon">
+					</div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+
 	<div class="bottom">
 		<div class="center">
 			<div class="bottom_con flex">
@@ -329,10 +414,10 @@
 								<a href="about.html">关于我们</a>
 							</th>
 							<th class="bottom_title">
-								<a href="">公司业务</a>
+								<a href="do.html" class="active">公司业务</a>
 							</th>
 							<th class="bottom_title">
-								<a href="program.html" class="active">项目案例</a>
+								<a href="program.html">项目案例</a>
 							</th>
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
@@ -343,7 +428,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="about.html" class=" aboutNav">公司介绍</a>
+								<a href="about.html" class="aboutNav">公司介绍</a>
 							</td>
 							<td>
 								<a href="bighealth.html">大健康</a>
@@ -406,7 +491,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="intelligent.html">智能化服务</a>
+								<a href="intelligent.html" class="active">智能化服务</a>
 							</td>
 							<td>
 								<a href="program.html">现代供应链咨询</a>
@@ -454,26 +539,61 @@
 	<script src="js/public.js"></script>
 	<script>
 		jQuery.support.cors = true;
+
+		//数据对接
 		$.ajax({
 			type:"GET",
-			url: "http://39.100.241.51:81/api/cases/list",
+			url: "http://39.100.241.51:81/api/bussiness/intellectualization",
 			data:"",
 			dataType:'JSON',
 			success:function(n){
-				var html='';
-				var list=n.data;
-				// var k=1;
-				for(var i=0;i<list.length;i++){
-					// console.log(i,2*k)
+				var html="";
+				var banner=n.data;
+				console.log(banner)
+				html+='<img src="http://39.100.241.51:81/'+banner[1].byid_pictures+'">';
+				$(".swiper-container").prepend(html);
+			}
+		})
+
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/bussiness/intellectualization",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var html="";
+				var intelligent=n.data;
+				for(var i=0;i<intelligent.length;i++){
+					if(intelligent[i].title1==null){
+						console.log(i)
+						intelligent[i].title1="";
+					}
 					if(i%2==0){
-						// console.log(i)
-						html+='<li class="flex"><img src="http://39.100.241.51:81/'+list[i].casepicture+'"><div class="program_con1 program_con" style="margin: 0 32px 0 18px;"><h3 style="text-align: right;">'+list[i].name+'</h3><p>'+list[i].title+'</p></div><div class="border"></div></li>'
+						html+='<li><div class="intelligentList flex"><div class="left"><h3>'+intelligent[i].name+'</h3><p>'+intelligent[i].title+'</p><p>'+intelligent[i].title1+'</p></div><img src="http://39.100.241.51:81/'+intelligent[i].picture+'" class="right"></div></li>';
 					}else{
-						// console.log(i)
-						html+='<li class="flex" style="background: rgba(1,127,64,0.06);"><div class="border"></div><div class="program_con2 program_con" style="margin-left: 32px;"><h3>'+list[i].name+'</h3><p>'+list[i].title+'</p></div><img src="http://39.100.241.51:81/'+list[i].casepicture+'" style="margin-left: 18px;"></li>'
+						html+='<li><div class="intelligentList flex"><img src="http://39.100.241.51:81/'+intelligent[i].picture+'" class="left"><div class="right"><h3>'+intelligent[i].name+'</h3><p>'+intelligent[i].title+'</p><p>'+intelligent[i].title1+'</p></div></div></li>';
 					}
 				}
-				$(".program ul").prepend(html);
+				$(".intelligent ul").prepend(html);
+			}
+		})
+
+		$.ajax({
+			type:"GET",
+			url: "http://39.100.241.51:81/api/bussiness/intellect_case",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var html="";
+				var cases=n.data;
+				for(var i=0;i<cases.length;i++){
+					if(i%2==0){
+						html+='<li class="ji"><h3>'+cases[i].name+'</h3><div class="caseCon flex"><img src="http://39.100.241.51:81/'+cases[i].picture+'" alt="" class="leftCon"><p class="rightCon">'+cases[i].title+'</p></div></li>';
+					}else{
+						html+='<li class="ou"><h3>'+cases[i].name+'</h3><div class="caseCon flex"><p class="leftCon">'+cases[i].title+'</p><img src="http://39.100.241.51:81/'+cases[i].picture+'" class="rightCon"></div></li>';
+					}
+				}
+				$(".case ul").prepend(html);
 			}
 		})
 	</script>

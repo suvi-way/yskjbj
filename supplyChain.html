@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>项目案例</title>
+	<title>供应链</title>
 	<link rel="icon" href="img/yingshi.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
@@ -14,107 +14,195 @@
 		.banner_swiper img{
 			width: 100%;
 		}
+		.banner_swiper .banner_icon1{
+			top: 27%;
+			width: 136px;
+		}
 		.banner_swiper .banner_icon2{
-			width: 346px;
+			top: 40%;
+			width: 296px;
 		}
 		.banner_swiper .banner_icon3{
-			width: 75px;
+			top: 56%;
+			width: 328px;
 		}
-		
-		.program{
-			padding-bottom: 50px;
-			/*background: red;*/
+
+		.chain{
 			min-width: 1200px;
 			background: #F7FBF9;
 		}
-		.program h2{
+		.chain ul{
 			position: relative;
-			z-index: 1;
-			margin: -54px 0 0;
-			font-size:20px;
-			color: #003E3A;
-			text-align: center;
+			z-index: 0;
+			margin-top: -74px;
 		}
-		.program .line{
-		    margin: 38px auto;
-		    width: 60%;
-		    height: 1px;
-		    background: #D8D8D8;
+		.chain li:nth-child(2n+1){
+			background: #F7FBF9;
 		}
-		.program ul{
+		.chain li:nth-child(2n){
+			background: #DFECE6;
+		}
+		.chainList{
 			margin: 0 auto;
-			width: 60%;
-		}
-		.program ul li{
-			margin-bottom: 38px;
+			padding: 60px 0;
+			width: 65%;
 			align-items: center;
 		}
-		.program ul li .border{
-			width: 3px;
-			height: 120px;
-			background: #017F40;
-			border-radius: 3px;
+		.chainList>div{
+			width: 50%;
 		}
-		.program ul h3{
-			font-size: 15px;
+		.chainList h3{
+			margin-bottom: 20px;
+		    font-size: 20px;
+		    color: #003E3A; 
+		}
+		.chainList p{
+			margin-bottom: 20px;
+		    font-size: 14px;
+		    color: #658684;
+		    line-height: 22px;
+		    text-align: justify;
+		}
+		.left{
+			margin-right: 30px;
+			text-align: left;
+		}
+		.right{
+			margin-left: 30px;
+			text-align: right;
+		}
+		.chainList .img{
+			width: 50%;
+		}
+		.img img{
+			width: 70%;
+		}
+		.chain li:nth-child(2) .img img{
+			width: 90%;
+		}
+
+		.finicial{
+			margin-bottom: 56px;
+			padding: 30px 0;
+			min-width: 1200px;
+			background: #DFECE6;
+		}
+		.finicial h2{
+			margin-bottom: 30px;
+			font-size: 20px;
 			color: #003E3A;
+			letter-spacing: 3px;
+			text-align: center;
 		}
-		.program ul p{
-			margin-top: 18px;
+		.finicial ul{
+			margin: 0 auto;
+			width: 65%;
+			flex-wrap: wrap;
+		}
+		.finicial ul li{
+			margin: 0 2.5%;
+			padding: 24px;
+			width: 30%;
+			height: 320px;
+			background: #fff;
+			box-shadow: 0px 2px 24px 1px rgba(183, 209, 197, 0.5);
+			border-radius: 10px;
+			text-align: center;
+		}
+		.finicial ul li img{
+			width: 60px;
+		}
+		.finicial ul li h4{
+			margin: 15px 0;
+			font-size: 15px;
+			color: #037F40;
+		}
+		.finicial ul li p{
 			font-size: 13px;
-			color: #017F40;
-			opacity: 0.5;
+			color: #658684;
+			text-align: left;
+			line-height: 20px;
+			text-align: justify;
 		}
-		.program ul img{
-			width: 36%;
+		.finicial ul li:nth-child(3n+1){
+			margin-left: 0;
 		}
-		.program_con{
-			width: 63%;
+		.finicial ul li:nth-child(3n){
+			margin-right: 0;
 		}
 
 		@media screen and (max-width: 760px){
+			.banner_swiper .banner_icon1{
+				width: 65px;
+			}
 			.banner_swiper .banner_icon2{
+				top: 44%;
 				width: 160px;
 			}
 			.banner_swiper .banner_icon3{
-				top: 64%;
-				width: 50px;
+				top: 61%;
+				width: 186px;
 			}
-
-			.program{
-				padding-bottom: 10px;
+			.chain{
 				min-width: 100%;
 			}
-			.program h2{
-				margin-top: -10px;
-				font-size: .32rem;
+			.chain ul{
+				margin-top: -15px;
 			}
-			.program .line{
-				margin: 16px auto 24px;
-				width: 85%;
+			.chainList{
+				padding: 20px 0;
+				width: 90%;
 			}
-			.program ul{
-				width: 85%;
-			}
-			.program ul li{
-				margin-bottom: 25px;
-			}
-			.program ul h3{
+			.chainList h3{
+				margin-bottom: 8px;
 				font-size: .28rem;
 			}
-			.program ul p{
-				margin-top: 6px;
+			.chainList p{
+				margin-bottom: 6px;
 				font-size: .24rem;
+				line-height: .34rem;
+			}
+			.left{
+				margin-right: 6px;
+			}
+			.right{
+				margin-left: 6px;
+			}
+			.img img{
+				width: 96%;
+			}
+			.chain li:nth-child(2) .img img{
+				width: 96%;
+			}
+
+			.finicial{
+				padding: 20px 0;
+				margin-bottom: 26px;
+				min-width: 100%;
+			}
+			.finicial h2{
+				margin-bottom: 15px;
+				font-size: .32rem;
+			}
+			.finicial ul{
+				width: 90%;
+			}
+			.finicial ul li{
+				margin: 0 1.75%;
+				padding: 6px;
+				width: 31%;
+				height: 300px;
+			}
+			.finicial ul li img{
+				width: 30px;
+			}
+			.finicial ul li h4{
+				margin: 8px 0;
+				font-size: .24rem;
+			}
+			.finicial ul li p{
+				font-size: .22rem;
 				line-height: .3rem;
-			}
-			.program_con1{
-				margin: 0 10px 0 8px !important;
-			}
-			.program_con2{
-				margin: 0 8px 0 10px !important;
-			}
-			.program ul li:nth-child(2n)>img{
-				margin-left: 0 !important;
 			}
 		}
 	</style>
@@ -168,7 +256,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="navcon downtitle">
+								<li class="navcon downtitle curson">
 									<!-- <img src="img/do-icon.png" class="boforeIcon"> -->
 									<a href="do.html" data-lang="do_header">
 									公司业务
@@ -202,7 +290,7 @@
 									<a href="partners.html" data-lang="partner_header">合作伙伴</a>
 									<i class="navIcon"></i>
 								</li>
-								<li class="navcon downtitle curson">
+								<li class="navcon downtitle">
 									<!-- <img src="img/partner-icon.png" class="boforeIcon"> -->
 									<a href="program.html" data-lang="partner_header">项目案例</a>
 									<i class="navIcon"></i>
@@ -268,11 +356,11 @@
 			</div>
 			<div class="banner_swiper">
 				<div class="swiper-container">
-					<img src="img/index/banner.png">
+					<!-- <img src="img/index/banner.png"> -->
 				</div>
-				<img src="img/program/banner_icon1.png" class="banner_icon1">
-				<img src="img/program/banner_icon2.png" class="banner_icon2">
-				<img src="img/program/banner_icon3.png" class="banner_icon3">
+				<img src="img/do/chain_icon1.png" class="banner_icon1">
+				<img src="img/do/chain_icon2.png" class="banner_icon2">
+				<img src="img/do/chain_icon3.png" class="banner_icon3">
 				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
@@ -284,41 +372,71 @@
 		</div>
 	</div>
 
-	<div class="program">
+	<div class="chain">
 		<div class="center">
-			<div class="program_title">
-				<h2>项目案例</h2>
-				<p class="line"></p>
-			</div>
 			<ul>
-				<!-- <li class="flex">
-					<img src="img/program/program1.png">
-					<div class="program_con" style="margin: 0 32px 0 18px;">
-						<h3 style="text-align: right;">能源节能</h3>
-						<p>为某航站楼S3006机房两台空调机组进行节能改造及研究；试点改造机组自身节能率达60%；与对照机房相比，节能率达38%；综合节能率36.3%-59.61%，投资回收期3-4年。</p>
+				<!-- <li>
+					<div class="chainList flex">
+						<div class="left">
+							<h3>供应链咨询业务</h3>
+							<p>中物联现代供应链研究院是中国物流与采购联合会直属二级单位，为政府与企业提供专业化的集中采购与供应链规划咨询、大数据服务。研究院名誉院长为厉以宁先生。</p>
+							<p> 盈实科技作为中物联现代供应链研究院理事单位，将进一步整合资源，为政府、企业做好供应链业务咨询工作。</p>
+						</div>
+						<div class="img right">
+							<img src="img/do/chain1.png">
+						</div>
 					</div>
-					<div class="border"></div>
 				</li>
-				<li class="flex" style="background: rgba(1,127,64,0.06);">
-					<div class="border"></div>
-					<div class="program_con" style="margin-left: 32px;">
-						<h3>智能办公</h3>
-						<p>根据需求个性化定制智能系统方案，实现办公室的高效管理，营造舒适的办公环境，同时节能减耗，降低维护成本。</p>
+				<li>
+					<div class="chainList flex">
+						<div class="img left">
+							<img src="img/do/chain2.png">
+						</div>
+						<div class="right">
+							<h3>供应链信息化业务</h3>
+							<p>整合供应链中的上游、中游和下游为一个整体，是企业社交网络和供应商进行合作的平台。能够帮助企业分析供应链、优化计划、调度和执行充分利用资产优势，最大限度地为供应链企业提高利润，最终创造最佳供应链网络的系统整合风险可控的安全平台。</p>
+						</div>
 					</div>
-					<img src="img/program/program2.png" style="margin-left: 18px;">
 				</li>
-				<li class="flex">
-					<img src="img/program/program3.png">
-					<div class="program_con" style="margin: 0 32px 0 18px;">
-						<h3 style="text-align: right;">系统集成</h3>
-						<p>仙桃国际大数据谷位于重庆市渝北区，做为西部重要的科技技术产业中心园区， 围绕中国大数据产业生态谷的总体目标，坚持技术创新、模式创新、业态创新、协同创新，集中优势资源着力发展大数据产业，形成自主可控的大数据产业链、价值链和生态系统。园区整体规划面积2平方公里，总建设规模约175万平方米，预计静态建设投资约127亿元。</p>
+				<li>
+					<div class="chainList flex">
+						<div class="left">
+							<h3>供应链人才培养业务</h3>
+							<p>2020年2月25日，供应链管理师作为新职业正式列入国家职业分类大典。8月，《供应链管理师国家职业技能标准》通过终审并即将发布。 </p>
+							<p> 获得中国物流与采购联合会在湖北、云南唯一授权的“供应链管理专家”、“助理供应链管理专家”职业水平认证。可为企业培养专业的供应链管理人才，亦可为计划从业与供应链方向的人提供学习、实践的途径。</p>
+						</div>
+						<div class="img right">
+							<img src="img/do/chain3.png">
+						</div>
 					</div>
-					<div class="border"></div>
 				</li> -->
 			</ul>
 		</div>
 	</div>
-	
+
+	<div class="finicial">
+		<div class="center">
+			<h2>供应链金融业务</h2>
+			<ul class="flex">
+				<!-- <li>
+					<img src="img/do/chain4.png" alt="">
+					<h4>供应链金融平台总线</h4>
+					<p>基于资产基础，及资金输入模式，通过组件化的金融产品设计，以供应链金融平台总线为核心，延伸保理融资、订单融资、仓单融资、存货融资等各金融产品，能够根据业务的推广及平台建设规划，分步实施，最终形成完备的供应链金融解决方案。</p>
+				</li>
+				<li>
+					<img src="img/do/chain5.png" alt="">
+					<h4>供应链金融平台总线</h4>
+					<p>根据供应链金融的业务开展需要，提供应收账款融资、存货质押融资、预付款融资业务，基于平台线上化操作，满足各种供应链金融业务的开展要求，根据核心企业的战略布局，在不同的业务模式中灵活选择配置。</p>
+				</li>
+				<li>
+					<img src="img/do/chain6.png" alt="">
+					<h4>供应链金融平台总线</h4>
+					<p>金融业务安全第一，风控是供应链金融业务的核心，也是平台系统正常生产运营的必要条件，基于供应链金融平台系统，建立全面的风控管理体系，建立客户、业务开展多层次的风险管理模型，实现全面的风险控制。</p>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+
 	<div class="bottom">
 		<div class="center">
 			<div class="bottom_con flex">
@@ -329,10 +447,10 @@
 								<a href="about.html">关于我们</a>
 							</th>
 							<th class="bottom_title">
-								<a href="">公司业务</a>
+								<a href="do.html" class="active">公司业务</a>
 							</th>
 							<th class="bottom_title">
-								<a href="program.html" class="active">项目案例</a>
+								<a href="program.html">项目案例</a>
 							</th>
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
@@ -343,7 +461,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="about.html" class=" aboutNav">公司介绍</a>
+								<a href="about.html" class="aboutNav">公司介绍</a>
 							</td>
 							<td>
 								<a href="bighealth.html">大健康</a>
@@ -363,7 +481,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="supplyChain.html">供应链</a>
+								<a href="supplyChain.html" class="active">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -454,26 +572,47 @@
 	<script src="js/public.js"></script>
 	<script>
 		jQuery.support.cors = true;
+
+		//数据对接
 		$.ajax({
 			type:"GET",
-			url: "http://39.100.241.51:81/api/cases/list",
+			url:"http://39.100.241.51:81/api/bussiness/chai",
+			data:"",
+			dataType:'JSON',
+			success:function(n){
+				var html1="";
+				var chain=n.data;
+				html1+='<img src="http://39.100.241.51:81/'+chain[0].byid_pictures+'">';
+				$(".swiper-container").prepend(html1);
+				var html2="";
+				for(var i=0;i<chain.length;i++){
+					if(chain[i].title1==null){
+						console.log(i)
+						chain[i].title1="";
+					}
+					if(i%2==0){
+						html2+='<li><div class="chainList flex"><div class="left"><h3>'+chain[i].name+'</h3><p>'+chain[i].title+'</p><p>'+chain[i].title1+'</p></div><div class="img right"><img src="http://39.100.241.51:81/'+chain[i].picture+'"></div></div></li>';
+					}else{
+						html2+='<li><div class="chainList flex"><div class="img left"><img src="http://39.100.241.51:81/'+chain[i].picture+'"></div><div class="right"><h3>'+chain[i].name+'</h3><p>'+chain[i].title+'</p><p>'+chain[i].title1+'</p></div></div></li>';
+					}
+					
+				}
+				$(".chain ul").prepend(html2);
+			}
+		})
+
+		$.ajax({
+			type:"GET",
+			url:"http://39.100.241.51:81/api/bussiness/Supply_chainfinance",
 			data:"",
 			dataType:'JSON',
 			success:function(n){
 				var html='';
-				var list=n.data;
-				// var k=1;
-				for(var i=0;i<list.length;i++){
-					// console.log(i,2*k)
-					if(i%2==0){
-						// console.log(i)
-						html+='<li class="flex"><img src="http://39.100.241.51:81/'+list[i].casepicture+'"><div class="program_con1 program_con" style="margin: 0 32px 0 18px;"><h3 style="text-align: right;">'+list[i].name+'</h3><p>'+list[i].title+'</p></div><div class="border"></div></li>'
-					}else{
-						// console.log(i)
-						html+='<li class="flex" style="background: rgba(1,127,64,0.06);"><div class="border"></div><div class="program_con2 program_con" style="margin-left: 32px;"><h3>'+list[i].name+'</h3><p>'+list[i].title+'</p></div><img src="http://39.100.241.51:81/'+list[i].casepicture+'" style="margin-left: 18px;"></li>'
-					}
+				var finance=n.data;
+				for(var i=0;i<finance.length;i++){
+					html+='<li><img src="http://39.100.241.51:81/'+finance[i].picture+'" alt=""><h4>'+finance[i].name+'</h4><p>'+finance[i].title+'</p></li>'
 				}
-				$(".program ul").prepend(html);
+				$(".finicial ul").prepend(html);
 			}
 		})
 	</script>

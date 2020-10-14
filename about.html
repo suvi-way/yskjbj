@@ -10,6 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 	<link rel="stylesheet" type="text/css" href="css/about.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/resize.js"></script>
+	<script src="js/jquery.ellipsis.js"></script>
+	<script src="js/jquery.ellipsis.unobtrusive.js"></script>
 </head>
 <body>
 	<div class="banner">
@@ -69,22 +72,22 @@
 									<div class="downmenu clear" style="width: 120%;margin-left: -10%;">
 										<ul class="downMiddle">
 											<li>
-												<a href="do.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
+												<a href="bighealth.html" style="text-decoration: none;" data-lang="do_map">大健康</a>
 											</li>
 											<li>
-												<a href="http://greenbr.org.cn/" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
+												<a href="supplyChain.html" style="text-decoration: none;" data-lang="do_bigdata" target="_blank">供应链</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
+												<a href="bigdata.html" style="text-decoration: none;" data-lang="do_green">大数据服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
+												<a href="informationize.html" style="text-decoration: none;" data-lang="do_green">信息化服务</a>
 											</li>
 											<li>
-												<a href="http://www.brigreensc.net/site/index" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
+												<a href="intelligent.html" style="text-decoration: none;" data-lang="do_green">智能化服务</a>
 											</li>
 											<li style="border-bottom: none;">
-												<a href="do-threeservice.html" style="text-decoration: none;" data-lang="do_three">咨询规划服务</a>
+												<a href="environment.html" style="text-decoration: none;" data-lang="do_three">环保服务</a>
 											</li>
 										</ul>
 									</div>
@@ -165,24 +168,24 @@
 				<img src="img/about/banner_icon1.png" class="banner_icon1">
 				<img src="img/about/banner_icon2.png" class="banner_icon2">
 				<img src="img/about/banner_icon3.png" class="banner_icon3">
-				<div class="language">
+				<!-- <div class="language">
 					<span style="color: #00B85C;">[</span>
 					<span class="ch now_lan">中文</span>
 					<span>|</span>
 					<span class="en">English</span>
 					<span style="color: #00B85C;">]</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
 	
 	<div class="tabbox">
 		<div class="center">
-		　　<ul class="aboutSelect flex">
-		　　　　<li class="active">公司介绍</li>
-		　　　　<li>组织结构</li>
-		　　　　<li>企业文化</li>
-		　　</ul>
+		　　<ul class="aboutSelect clear">
+				<li class="fl active" data-lang="about_info">公司介绍</li>
+				<li class="fl" data-lang="about_custructor">组织结构</li>
+				<li class="fl" data-lang="about_culture">企业文化</li>
+			</ul>
 			<p class="line"></p>
 			<div class="content">
 			　　<div class="aboutContent" style="display: block;">
@@ -194,33 +197,51 @@
 						    <div class="swiper-wrapper">
 						    	<!-- <div class="swiper-main"> -->
 						    	<div class="swiper-slide">
-						        	<img src="img/about/kj_info.png" alt="" align="left" width="363px">
-						        	<!-- vspace 表示图片与文字的上下距离，hspace表示左右距离。 -->
-						        	<div class="kj_info" style="word-break: break-all">
-						        		<h3>盈实科技（北京）有限公司</h3>
-						        		<p> 盈实科技（北京）有限公司成立于2016年，总部位于北京市焦奥中心。公司专注于利用前沿技术提升城市生活体验，基于多年在物联网，移动应用，大数据领域的深厚实力，不断创新，探索人与城市的新交互方式，展现城市生活的未来形态。针对国家生态环境和智慧社会建设的战略规划，提供多样化的定制化方案，在满足现代社会信息化发展需求的同时积极响应国家“互联网+”的战略目标。</p>
-						        		<p> 基于“共商、共建、共享”原则，盈实科技与各方伙伴建立了紧密的战略合作关系，围绕绿色“一带一路”建设的宏伟蓝图，共同致力于收集、整理和分析“一带一路”工程中的环境信息，与生态环境部对外合作与交流中心共同建设并运维“一带一路”生态环保大数据服务平台及绿色供应链平台，整合环境数据服务于绿色投资、政府环境决策和企业环境咨询，通过企业、政府、研究机、构、金融机构、媒体等多方合力，推动“一带一路”参与企业环境责任的建立健全和环境治理机制的完善，向世界讲述中国的环保故事和决心。</p>
-						        		<p> 公司先后与生态环境部对外合作与交流中心、中物联物流规划研究院、中国信息安全研究院、中国电子信息产业集团、中国电信股份有限公司、中国联合网络通信集团有限公司、国家电网有限公司、武汉新港建设投资开发集团有限公司、武汉市航运交易所等机构及大型企业建立了全面战略合作关系，并借助“一带一路”绿色发展国际联盟与海内外各类环保相关机构及企业建立了紧密的伙伴关系。</p>
-						        		<p> 公司以“飞速的发展业绩，细分的行业产品”为目标，努力实践公司理念和愿景；以技术创新、商业创新和管理创新为统领，充分发挥盈实人开拓进取的优良品质，不断探索前沿技术，提升产品应用品质，全力支撑电子信息产业和环境保护产业发展。</p>
-						        	</div>
+						    		<div class="companyList">
+						    			<img src="img/about/kj_info.png" alt="" align="left" class="infoImg">
+							        	<!-- vspace 表示图片与文字的上下距离，hspace表示左右距离。 -->
+							        	<div class="kj_info" style="word-break: break-all">
+							        		<h3>盈实科技（北京）有限公司</h3>
+							        		<p> 盈实科技（北京）有限公司成立于2016年，总部位于北京市焦奥中心。公司专注于利用前沿技术提升城市生活体验，基于多年在物联网，移动应用，大数据领域的深厚实力，不断创新，探索人与城市的新交互方式，展现城市生活的未来形态。针对国家生态环境和智慧社会建设的战略规划，提供多样化的定制化方案，在满足现代社会信息化发展需求的同时积极响应国家“互联网+”的战略目标。</p>
+							        		<p> 基于“共商、共建、共享”原则，盈实科技与各方伙伴建立了紧密的战略合作关系，围绕绿色“一带一路”建设的宏伟蓝图，共同致力于收集、整理和分析“一带一路”工程中的环境信息，与生态环境部对外合作与交流中心共同建设并运维“一带一路”生态环保大数据服务平台及绿色供应链平台，整合环境数据服务于绿色投资、政府环境决策和企业环境咨询，通过企业、政府、研究机、构、金融机构、媒体等多方合力，推动“一带一路”参与企业环境责任的建立健全和环境治理机制的完善，向世界讲述中国的环保故事和决心。</p>
+							        		<p> 公司先后与生态环境部对外合作与交流中心、中物联物流规划研究院、中国信息安全研究院、中国电子信息产业集团、中国电信股份有限公司、中国联合网络通信集团有限公司、国家电网有限公司、武汉新港建设投资开发集团有限公司、武汉市航运交易所等机构及大型企业建立了全面战略合作关系，并借助“一带一路”绿色发展国际联盟与海内外各类环保相关机构及企业建立了紧密的伙伴关系。</p>
+							        		<p> 公司以“飞速的发展业绩，细分的行业产品”为目标，努力实践公司理念和愿景；以技术创新、商业创新和管理创新为统领，充分发挥盈实人开拓进取的优良品质，不断探索前沿技术，提升产品应用品质，全力支撑电子信息产业和环境保护产业发展。</p>
+							        	</div>
+						    		</div>
+						        	
+						        	<div class="photos">
+								    	<img src="img/about/photos.png" alt="">
+								    </div>
 						        </div>
 						        <div class="swiper-slide">
-						        	<img src="img/about/gyl_info.png" alt="" align="left" hspace="23px" vspace="0px" width="363px">
-						        	<!-- vspace 表示图片与文字的上下距离，hspace表示左右距离。 -->
-						        	<div class="kj_info" style="word-break: break-all">
-						        		<h3>北京盈实智慧供应链管理有限公司</h3>
-						        		<p>北京盈实智慧供应链管理有限公司（以下简称：盈实供应链）是一家集供应链规划设计、平台开发、运营及相关配套服务于一体的高新技术企业。公司长期服务于各级政府、央企和国企，为客户的现代供应链体系建设提供强大的理论支持和技术支撑。随着市场对供应链产业需求的不断提升，盈实智慧供应链也在加强与客户的合作深度。得益于多年的积累，公司在现代供应链顶层设计，全流程供应链平台开发（交易、物流、仓储、金融）等方面具有行业领先优势。目前，客户广泛分布于北京、湖北、福建、云南、重庆、四川、宁夏等地区。盈实供应链已经具备成为国内供应链。</p>
-						        		<p> 产业规划与平台搭建龙头企业的潜质。 在未来的发展中，我们将根据国家现代物流产业要求、现代服务业发展方向及国家现代供应链战略，实施企业“大平台”战略，运用互联网思维，物联网技术和大数据分析，不断在客户中提升供应链服务的创新价值和能力，全面打造以现代物流领域为核心的供应链产业生态圈。</p>
+						        	<div class="companyList">
+						        		<img src="img/about/gyl_info.png" alt="" align="left" vspace="0px" class="infoImg">
+							        	<!-- vspace 表示图片与文字的上下距离，hspace表示左右距离。 -->
+							        	<div class="kj_info" style="word-break: break-all">
+							        		<h3>北京盈实智慧供应链管理有限公司</h3>
+							        		<p>北京盈实智慧供应链管理有限公司（以下简称：盈实供应链）是一家集供应链规划设计、平台开发、运营及相关配套服务于一体的高新技术企业。公司长期服务于各级政府、央企和国企，为客户的现代供应链体系建设提供强大的理论支持和技术支撑。随着市场对供应链产业需求的不断提升，盈实智慧供应链也在加强与客户的合作深度。得益于多年的积累，公司在现代供应链顶层设计，全流程供应链平台开发（交易、物流、仓储、金融）等方面具有行业领先优势。目前，客户广泛分布于北京、湖北、福建、云南、重庆、四川、宁夏等地区。盈实供应链已经具备成为国内供应链。</p>
+							        		<p> 产业规划与平台搭建龙头企业的潜质。 在未来的发展中，我们将根据国家现代物流产业要求、现代服务业发展方向及国家现代供应链战略，实施企业“大平台”战略，运用互联网思维，物联网技术和大数据分析，不断在客户中提升供应链服务的创新价值和能力，全面打造以现代物流领域为核心的供应链产业生态圈。</p>
+							        	</div>
 						        	</div>
+						        	
+						        	<div class="photos">
+								    	<img src="img/about/photos.png" alt="">
+								    </div>
 						        </div>
-						        <div class="swiper-slide flex" style="align-items: center;">
-						        	<img src="img/about/wl_info.png" alt="" align="left" hspace="23px" vspace="0px" width="363px">
-						        	<!-- vspace 表示图片与文字的上下距离，hspace表示左右距离。 -->
-						        	<div class="kj_info">
-						        		<h3>盈实未来有限公司</h3>
-						        		<p>  盈实未来有限公司成立于2018年，总部位于北京市焦奥中心。公司专注于利用前沿技术提升城市生活体验，基于多年在物联网，移动应用，大数据领域的深厚实力，不断创新，探索人与城市的新交互方式，展现城市生活的未来形态。针对国家生态环境和智慧社会建设的战略规划，提供多样化的定制化方案，在满足现代社会信息化发展需求的同时积极响应国家“互联网+”的战略目标。</p>
+						        <div class="swiper-slide" style="align-items: center;">
+						        	<div class="companyList companyList3 flex" style="align-items: center;">
+						        		<img src="img/about/wl_info.png" alt="" align="left" vspace="0px" class="infoImg">
+							        	<!-- vspace 表示图片与文字的上下距离，hspace表示左右距离。 -->
+							        	<div class="kj_info wl_info">
+							        		<h3>盈实未来有限公司</h3>
+							        		<p>  盈实未来有限公司成立于2018年，总部位于北京市焦奥中心。公司专注于利用前沿技术提升城市生活体验，基于多年在物联网，移动应用，大数据领域的深厚实力，不断创新，探索人与城市的新交互方式，展现城市生活的未来形态。针对国家生态环境和智慧社会建设的战略规划，提供多样化的定制化方案，在满足现代社会信息化发展需求的同时积极响应国家“互联网+”的战略目标。</p>
+							        	</div>
 						        	</div>
+						        	
 						        <!-- </div> -->
+						        <div class="photos">
+							    	<img src="img/about/photos.png" alt="">
+							    </div>
 						    	</div>
 						    </div>
 						</div>
@@ -232,9 +253,6 @@
 					    </div>
 					</div>
 					
-				    <div class="photos">
-				    	<img src="img/about/photos.png" alt="">
-				    </div>
 				</div>
 				<div class="aboutContent">
 					<img src="img/about/custructor.png" class="custructor">
@@ -287,7 +305,7 @@
 							<th class="bottom_title">
 								<a href="news.html">新闻资讯</a>
 							</th>
-							<th class="bottom_title">
+							<th class="bottom_title" style="padding-right: 0;text-align: center;">
 								<a href="index.html">网站首页</a>
 							</th>
 						</tr>
@@ -296,7 +314,7 @@
 								<a href="about.html" class="active aboutNav">公司介绍</a>
 							</td>
 							<td>
-								<a href="">大健康</a>
+								<a href="bighealth.html">大健康</a>
 							</td>
 							<td>
 								<a href="program.html">能源节约</a>
@@ -304,7 +322,7 @@
 							<td>
 								<a href="news.html" class="newsNav">媒体报道</a>
 							</td>
-							<th style="padding-bottom: 6px;">
+							<th style="padding-bottom: 6px;padding-right: 0;text-align: center;">
 								<a href="partners.html">合作伙伴</a>
 							</th>
 						</tr>
@@ -313,7 +331,7 @@
 								<a href="about.html?data=1" class="aboutNav">组织结构</a>
 							</td>
 							<td>
-								<a href="">供应链</a>
+								<a href="supplyChain.html">供应链</a>
 							</td>
 							<td>
 								<a href="program.html">智能办公</a>
@@ -321,7 +339,7 @@
 							<td>
 								<a href="news.html?data=1" class="newsNav">企业资讯</a>
 							</td>
-							<th>
+							<th style="padding-right: 0;text-align: center;">
 								<a href="concat.html">联系我们</a>
 							</th>
 						</tr>
@@ -330,7 +348,7 @@
 								<a href="about.html?data=2" class="aboutNav">企业文化</a>
 							</td>
 							<td>
-								<a href="">大数据服务</a>
+								<a href="bigdata.html">大数据服务</a>
 							</td>
 							<td>
 								<a href="program.html">系统集成</a>
@@ -343,7 +361,7 @@
 						<tr>
 							<td>    </td>
 							<td>
-								<a href="">信息化服务</a>
+								<a href="informationize.html">信息化服务</a>
 							</td>
 							<td>
 								<a href="program.html">环保咨询</a>
@@ -356,7 +374,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">智能化服务</a>
+								<a href="intelligent.html">智能化服务</a>
 							</td>
 							<td>
 								<a href="program.html">现代供应链咨询</a>
@@ -367,7 +385,7 @@
 						<tr>
 							<td>     </td>
 							<td>
-								<a href="">咨询规划服务</a>
+								<a href="environment.html">环保服务</a>
 							</td>
 							<td>    </td>
 							<td>    </td>
@@ -397,7 +415,7 @@
 		</div>
 	</div>
 	<div class="copy">
-		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：根据实际的备案号填写
+		版权所有：盈实科技（北京）有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案号：京ICP备18061162号-1
 	</div>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
@@ -442,6 +460,7 @@
 			$(".aboutContent").eq(data).css("display","block").siblings(".aboutContent").css("display","none");
 			$(".aboutNav").eq(data).addClass("active").parents("tr").siblings().children("td").children(".aboutNav").removeClass('active');
 		}
+
 	</script>
 </body>
 </html>

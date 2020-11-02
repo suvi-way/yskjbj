@@ -11,6 +11,10 @@
               :label-width="80"
               inline
             >
+              <FormItem label="新闻标题" :label-width="100" prop="title">
+                <Input type="text" v-model="formNews.title" placeholder="新闻标题"/>
+              </FormItem>
+
               <FormItem>
                 <Button type="primary" @click="handleSubmit('formNews')">查询</Button>
                 <Button @click="handleReset('formNews')" style="margin-left: 8px">重置</Button>

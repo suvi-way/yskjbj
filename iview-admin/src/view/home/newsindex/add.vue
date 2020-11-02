@@ -167,7 +167,7 @@
     watch: {
       value: function (val, oldVal) {
 
-        coverFormProps(this.formNewsindex, this.newsindex)
+                          
 
         this.initData();
       }

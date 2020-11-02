@@ -40,7 +40,7 @@ public class news extends IViewController {
      */
     @RequestMapping("/lsit")
     public void  lsit(){
-        List<News> list=News.dao.find("SELECT * FROM  news  ");
+        List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 3  ORDER BY  createdate desc");
         renderSuccess(list);
     }
     /**
@@ -48,15 +48,16 @@ public class news extends IViewController {
      */
     @RequestMapping("/Corporate_news")
     public void  news(){
-     List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 2 ");
+     List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 2  ORDER BY  createdate desc");
      renderSuccess(list);
+
     }
     /**
      *一带一路新闻接口
      */
     @RequestMapping("/Road_Initiative")
     public void  Road_Initiative(){
-        List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 3 ");
+        List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 3 ORDER BY  createdate desc");
         renderSuccess(list);
     }
     /**
@@ -64,7 +65,7 @@ public class news extends IViewController {
      */
     @RequestMapping("/Industry_news")
     public void  Industry_news(){
-        List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 1");
+        List<News> list=News.dao.find("SELECT * FROM  news   WHERE nkid = 1 ORDER BY  createdate desc");
         renderSuccess(list);
     }
     /**
@@ -73,7 +74,7 @@ public class news extends IViewController {
     @RequestMapping("/selectId")
     public  void  SelectId(){
         Integer id=getInt("id");
-        List<News> list  =News.dao.find("select * from news  where id=?",id);
+        List<News> list  =News.dao.find("select * from news  where id=? ",id);
         renderSuccess(list);
     }
     /**
@@ -98,10 +99,6 @@ public class news extends IViewController {
         }else {
             List<News> list  =News.dao.find("SELECT * FROM news WHERE title LIKE  '%"+title+"%'  && nkid=?",id);
             renderSuccess(list);
-
         }
-
-
     }
-
 }

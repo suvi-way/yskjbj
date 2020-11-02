@@ -54,10 +54,10 @@
         <img :src=" getImageUrl(imageUrl)" v-if="visible" style="width: 100%;height:200px;">
       </Modal>
       <FormItem label="请选择" :label-width="100" prop="nkid">
-        <Select v-model="formNews.nkid" style="width:200px">
-          <Option v-for="item in cityList" :value="item.id" :key="item.id">{{ item.kinds }}</Option>
-        </Select>
-      </FormItem>
+      <Select v-model="formNews.nkid" style="width:200px">
+        <Option v-for="item in cityList"  :value="item.id" :key="item.id" >{{ item.kinds }}</Option>
+      </Select>
+    </FormItem>
       <FormItem label="内容" :label-width="100" prop="content">
         <rich-text style="margin-bottom: 5%" :value="formNews.content"  @on-change="richTextChange($event)"></rich-text>
       </FormItem>
@@ -181,7 +181,6 @@
     },
     watch: {
       value: function (val, oldVal) {
-        coverFormProps(this.formNews, this.news)
         this.initData()
       }
     }

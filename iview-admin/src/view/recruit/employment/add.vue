@@ -95,7 +95,7 @@
     },
     watch: {
       value: function (val, oldVal) {
-        coverFormProps(this.formEmployment, this.employment)
+
         this.initData()
       }
     }

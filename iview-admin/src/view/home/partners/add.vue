@@ -165,7 +165,7 @@
     watch: {
       value: function (val, oldVal) {
         this.$refs.formPartnersIndex.resetFields()
-        coverFormProps(this.formPartnersIndex, this.partnersIndex)
+
         this.initData();
       }
     }

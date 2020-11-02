@@ -237,7 +237,6 @@
     },
     watch: {
       value: function (val, oldVal) {
-        coverFormProps(this.formPartners, this.partners)
         this.initData()
       }
     }
